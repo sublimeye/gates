@@ -637,8 +637,13 @@ $(document).ready(function () {
 								house = $("#singleHouse").data("scrollable");
 								singleHouseIndex = $("#section_tour3D").html() ? 1 : 0;
 
-								$(window).bind("resize", navResize);
-								navResize();
+								/**
+								 * change width of prev/next overlays for house Description
+								 * This size will be set in percentage. We don't need to change
+								 * it with js or expression. Also initial calc width was too big.
+								 */
+//								$(window).bind("resize", navResize);
+//								navResize();
 
 								house.onBeforeSeek(function (event, i) {
 									if ($(house.getItems()[i]).attr("id")) {
@@ -808,7 +813,7 @@ $(document).ready(function () {
 	}
 
 	/* Ресайз слайдера открытого дома */
-
+	/* @deprecated */
 	function navResize () {
 		$(".browse.left.prev, .browse.right.next").width((document.body.offsetWidth - 700) / 2);
 	};
