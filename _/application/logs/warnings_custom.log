@@ -1,0 +1,8 @@
+==== 7.11.2012/19:49:50/0.43436000 MESSAGE_WARNING CUSTOM warning_sort_position_bad ====
+level: 0
+description: Can not set sort order. Incorrect parameters
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/basemodel.php
+line: 806
+class: baseModel
+method: baseModel::SetSortOrder
+msg: Указанная позиция для сортировки не сохранена, ибо позиция больше количества записей.

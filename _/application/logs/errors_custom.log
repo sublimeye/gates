@@ -1,0 +1,260 @@
+==== 2.11.2012/13:27:24/0.36097000 ERROR CUSTOM error_url_not_unique ====
+level: 0
+description: Can not create Building. Building url not unique
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building.php
+line: 83
+class: Building
+method: Building::add
+msg: Url не уникален
+
+==== 2.11.2012/13:27:38/0.81310500 ERROR CUSTOM error_url_not_unique ====
+level: 0
+description: Can not create Building. Building url not unique
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building.php
+line: 83
+class: Building
+method: Building::add
+msg: Url не уникален
+
+==== 2.11.2012/13:33:50/0.85670900 ERROR CUSTOM error_url_not_unique ====
+level: 0
+description: Can not create Building. Building url not unique
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building.php
+line: 83
+class: Building
+method: Building::add
+msg: Url не уникален
+
+==== 2.11.2012/13:34:01/0.88779400 ERROR CUSTOM error_url_not_unique ====
+level: 0
+description: Can not create Building. Building url not unique
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building.php
+line: 83
+class: Building
+method: Building::add
+msg: Url не уникален
+
+==== 7.11.2012/13:51:33/0.42924400 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Вы не выбрали файл для загрузки.</p>
+
+==== 7.11.2012/15:26:44/0.53030600 ERROR CUSTOM error_item_not_exist ====
+level: 0
+description: Can not delete file. Parent item does not exist
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/basemodel.php
+line: 1757
+class: baseModel
+method: baseModel::delete_file
+msg: Unresolved message code=error_item_not_exist
+
+==== 7.11.2012/15:27:01/0.85496400 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Вы не выбрали файл для загрузки.</p>
+
+==== 7.11.2012/15:45:31/0.63711200 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Вы не выбрали файл для загрузки.</p>
+
+==== 12.11.2012/11:06:32/0.31963700 ERROR CUSTOM error_invalid_login_or_password ====
+level: 0
+description: User Auth error. Invalid login or password
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/user.php
+line: 215
+class: User
+method: User::Auth
+msg: Неверный email или пароль
+
+==== 12.11.2012/11:06:51/0.65141700 ERROR CUSTOM error_invalid_login_or_password ====
+level: 0
+description: User Auth error. Invalid login or password
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/user.php
+line: 215
+class: User
+method: User::Auth
+msg: Неверный email или пароль
+
+==== 12.11.2012/11:07:21/0.04318500 ERROR CUSTOM error_invalid_login_or_password ====
+level: 0
+description: User Auth error. Invalid login or password
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/user.php
+line: 215
+class: User
+method: User::Auth
+msg: Неверный email или пароль
+
+==== 13.11.2012/11:53:02/0.07037800 ERROR CUSTOM error_invalid_login_or_password ====
+level: 0
+description: User Auth error. Invalid login or password
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/user.php
+line: 215
+class: User
+method: User::Auth
+msg: Неверный email или пароль
+
+==== 13.11.2012/14:27:24/0.73128500 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Этот файл был частично загружен.</p>
+
+==== 13.11.2012/15:59:20/0.76796300 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Этот файл был частично загружен.</p>
+
+==== 13.11.2012/16:03:18/0.25033800 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Вы не выбрали файл для загрузки.</p>
+
+==== 13.11.2012/16:11:56/0.98419800 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Этот файл был частично загружен.</p>
+
+==== 13.11.2012/16:18:01/0.67367500 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Вы не выбрали файл для загрузки.</p>
+
+==== 13.11.2012/16:20:25/0.15404300 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Вы не выбрали файл для загрузки.</p>
+
+==== 13.11.2012/16:22:56/0.81058900 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Вы не выбрали файл для загрузки.</p>
+
+==== 13.11.2012/16:28:32/0.38245300 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Этот файл был частично загружен.</p>
+
+==== 13.11.2012/16:28:43/0.14665600 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Этот файл был частично загружен.</p>
+
+==== 13.11.2012/16:30:30/0.65159300 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Этот файл был частично загружен.</p>
+
+==== 13.11.2012/16:33:50/0.40871300 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Этот файл был частично загружен.</p>
+
+==== 13.11.2012/16:39:01/0.58665500 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Вы не выбрали файл для загрузки.</p>
+
+==== 13.11.2012/16:44:22/0.26479800 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Этот файл был частично загружен.</p>
+
+==== 14.11.2012/11:49:15/0.56945800 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building.php
+line: 278
+class: Building
+method: Building::update
+msg: <p>Этот файл был частично загружен.</p>
+
+==== 14.11.2012/14:35:21/0.07639300 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Вы не выбрали файл для загрузки.</p>
+
+==== 14.11.2012/14:39:27/0.48470100 ERROR CUSTOM custom ====
+level: 0
+description: Can not upload file.
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/building_place_images.php
+line: 67
+class: Building_place_images
+method: Building_place_images::add
+msg: <p>Вы не выбрали файл для загрузки.</p>
+
+==== 9.12.2012/22:45:12/0.85915700 ERROR CUSTOM error_item_not_exist ====
+level: 0
+description: Can not delete file. Parent item does not exist
+file: /var/www/to_net_ua/data/www/gorodok.nabalkone.kiev.ua/_/application/models/basemodel.php
+line: 1757
+class: baseModel
+method: baseModel::delete_file
+msg: Unresolved message code=error_item_not_exist
