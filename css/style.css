@@ -201,7 +201,8 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 
 /* CONTENT */
 .workArea {
-	width: 1488px;
+	/*width: 1488px;*/
+	width: auto;
 	height: 927px;
 	position: relative;
 	top: 50%;
@@ -212,10 +213,10 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	background: url(../img/mainBg.jpg) no-repeat;
 }
 .alpiyka {
-	background: url(../img/kon_bg.jpg) no-repeat;
+	background: url(../img/konyk_big.jpg) no-repeat;
 }
 .konik {
-	background: url(../img/alp_bg.jpg) no-repeat;
+	background: url(../img/alpiyka_big.jpg) no-repeat;
 	height: 950px;
 	margin-top: -475px;
 }
