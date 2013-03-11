@@ -2,7 +2,7 @@
 
 <?php $this->load->view('header')?>
 
-<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+<script src="/js//jquery.tools.min.js"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
     
 <script type="text/javascript" src="/js/history.js"></script>
