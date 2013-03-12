@@ -39,87 +39,88 @@
    <?php echo $this->get('description')?>
 </div>
 
+<div class="outerWrapper">
+	<div class="wrapper">
 
-<div class="wrapper">
+			<div class="workArea konik js-workarea" id="city_block" data-active-zone="92,253,924,750"><!-- альпийка -->
 
-    <div class="workArea konik" id="city_block">
+					<div class="fixLabels">
 
-        <div class="fixLabels">
+							<div class="windRose"></div>
 
-            <div class="windRose"></div>
+					</div>
 
-        </div>
+					<div class="allLabels">
 
-        <div class="allLabels">
+							<div id="map">
+							</div>
+					</div>
 
-            <div id="map">
-            </div>
-        </div>
+					<div class="overlay" style="z-index:60000;display:none;"></div>
+			</div>
 
-        <div class="overlay" style="z-index:60000;display:none;"></div>
-    </div>
+			<div class="workArea konik noneDisplay" id="infrastructure_block">
 
-    <div class="workArea konik noneDisplay" id="infrastructure_block">
+					<div class="fixLabels">
+							<div class="windRose"></div>
+					</div>
 
-        <div class="fixLabels">
-            <div class="windRose"></div>
-        </div>
+					<div class="allLabels">
 
-        <div class="allLabels">
+							<div class="label bigF beach">
+								 Пляж
+								 <div class="tail"></div>
+							</div>
 
-            <div class="label bigF beach">
-               Пляж
-               <div class="tail"></div>
-            </div>
+							<div class="label bigF kpp">
+								 КПП
+								 <div class="tail"></div>
+							</div>
 
-            <div class="label bigF kpp">
-               КПП
-               <div class="tail"></div>
-            </div>
-						
-						<div class="label bigF lake">
-               Родниковое озеро
-               <div class="tail"></div>
-            </div>
+							<div class="label bigF lake">
+								 Родниковое озеро
+								 <div class="tail"></div>
+							</div>
 
-						<div class="label bigF tenis">
-                Теннисные корты
-               <div class="tail"></div>
-            </div>
+							<div class="label bigF tenis">
+									Теннисные корты
+								 <div class="tail"></div>
+							</div>
 
-						<div class="label bigF playGround">
-                Детская площадка
-               <div class="tail"></div>
-            </div>
+							<div class="label bigF playGround">
+									Детская площадка
+								 <div class="tail"></div>
+							</div>
 
-            <div class="infrastructureBlock">
-                <div class="menu">
-                    <div id="block_content_one" class="menuItem active">Служба безопасности и сервиса</div>
-                    <!--div id="block_content_two" class="menuItem">Служба сервиса</div-->
-                </div>
+							<div class="infrastructureBlock">
+									<div class="menu">
+											<div id="block_content_one" class="menuItem active">Служба безопасности и сервиса</div>
+											<!--div id="block_content_two" class="menuItem">Служба сервиса</div-->
+									</div>
 
-                <div class="blockContent one">
-                    <ul>
-                      <li>КПП на въезде</li>
-                      <li>Круглосуточная охрана и патрулирование территории</li>
-                      <li>Вывоз мусора, сезонные уборка листьев и снега</li>
-                      <li>Систематическое техническое обслуживание и профилактический ремонт сетей городка</li>
-                      <li>Обслуживание системы уличного освещения, зон общего пользования</li>
-                    </ul>
-                </div>
-                <div class="blockContent two" style="display: none">
+									<div class="blockContent one">
+											<ul>
+												<li>КПП на въезде</li>
+												<li>Круглосуточная охрана и патрулирование территории</li>
+												<li>Вывоз мусора, сезонные уборка листьев и снега</li>
+												<li>Систематическое техническое обслуживание и профилактический ремонт сетей городка</li>
+												<li>Обслуживание системы уличного освещения, зон общего пользования</li>
+											</ul>
+									</div>
+									<div class="blockContent two" style="display: none">
 
-                </div>
-            </div>
+									</div>
+							</div>
 
-        </div>
-    </div>
+					</div>
+			</div>
 
-    <div id="map_block" class="noneDisplay">
-    	<div id="canvas_holder">
-    		<div id="map_canvas"></div>
-    	</div>
-    </div>
+			<div id="map_block" class="noneDisplay">
+				<div id="canvas_holder">
+					<div id="map_canvas"></div>
+				</div>
+			</div>
+	</div>
 </div>
 
 <div class="houseDescription">

@@ -854,6 +854,7 @@ $(document).ready(function () {
 	var clouds_obj = new Clouds();
 
 	clouds_obj.Init();
+	mapResizer.init();
 
 	var anchors_section_handler = {
 		'city': main_menu_handler,
@@ -876,8 +877,197 @@ $(document).ready(function () {
 	$(".menuFooter").bind("click", function () {
 		$(".cityMenu a").slideToggle("fast");
 	});
-})
+});
 
 
- 
+/**
+ * Zoom or Crop Map
+ * @Dependencies:
+ * 		for the first instance of .workArea -> addional .js-workarea must be added
+ * 		for .js-workarea data-active-zone="92,253,924,750" attr must be set
+ *
+ *
+ * @type {{$win: null, $wrapper: null, img: null, vis: null, crop: null, init: Function, events: Function, getElementsData: Function, fitToWindow: Function, setScale: Function, setTransform: Function, updateOffset: Function, clearOffset: Function, getCoordinates: Function, getVisualAreaCropPercentage: Function, getScale: Function}}
+ */
+var mapResizer = {
+	$win: null,
+	$wrapper: null,
+	img: null,
+	vis: null,
+	crop: null,
 
+	init: function() {
+		this.getElementsData();
+		this.events();
+	},
+
+	events: function() {
+		$(window).bind('resize', this.fitToWindow.bind(this) );
+	},
+
+	/**
+	 * Find layout elements for later usage
+	 * Run initial calculations
+	 */
+	getElementsData: function() {
+		var workarea = $('.js-workarea');
+		var data = workarea.attr('data-active-zone').split(',');
+
+		this.$win = $(window);
+		this.$wrapper = $('.wrapper');
+
+		this.getCoordinates(workarea, data);
+		this.getVisualAreaCropPercentage();
+
+	},
+
+	/**
+	 * Map fit to screen main func
+	 * Logic:
+	 * 	if window < ActiveArea -> zoom out
+	 * 	if window > activeArea < bgImage (smartCrop)
+	 * 	if window > bgImage (zoom in)
+	 * @returns {boolean}
+	 */
+	fitToWindow: function() {
+		var W = this.$win.width();
+		var H = this.$win.height();
+		var vis = this.vis;
+		var img = this.img;
+		var scale = 1;
+
+		/* Window size is smaller than the active zone width or height => zoom in */
+		if ( W < vis.w || H < vis.h ) {
+			// zoom out by smaller axis (x or y)
+			scale = this.getScale(W, H, vis, img);
+			this.setTransform('top left');
+		}
+
+		/* window size is bigger than AZ */
+		/* but window size is smaller than image size => crop the image, add offset */
+		else if ( W < img.w || H < img.h ) {
+			// add top and||or left offset
+			// remove scale
+			this.updateOffset(W, H);
+			this.setTransform('top center');
+			this.setScale( 1 ); // 1
+			return false;
+
+		/* window size is bigger than image => zoom in the image */
+		} else {
+			this.clearOffset();
+			scale = this.getScale(W, H, vis, img);
+		}
+
+		this.setScale( scale );
+	},
+
+	/**
+	 * Set CSS transform property
+	 * @param scale {string} scale value
+	 */
+	setScale: function(scale) {
+			this.$wrapper.css('-webkit-transform', 'scale( ' + scale + ' )');
+	},
+
+	/**
+	 * Set CSS transform-origin property
+	 * @param transform {string} origin aligning
+	 */
+	setTransform: function(transform) {
+		this.$wrapper.css('-webkit-transform-origin', transform );
+	},
+
+	/* TODO: refactor this */
+	/**
+	 * Updates CSS margin property of the .wrapper element
+	 * @param W {Number} Window width
+	 * @param H {Number} Window height
+	 */
+	updateOffset: function(W, H) {
+		var overflowX = this.img.w - W;
+		var overflowY = this.img.h - H;
+
+		if (overflowX < 0) {overflowX = 0}
+		if (overflowY < 0) {overflowY = 0}
+
+		var offsetValueX = overflowX ? overflowX * this.crop.left : 0;
+		var offsetValueY = overflowY ? overflowY * this.crop.top : 0;
+
+		this.$wrapper.css({
+			'margin-left': -offsetValueX + 'px',
+			'margin-top': -offsetValueY + 'px'
+		});
+	},
+
+	/**
+	 * Set .wrapper margin to the basic '0 auto' values (for crop & zoom-in modes)
+	 */
+	clearOffset: function() {
+		this.$wrapper.css('margin', '0 auto');
+	},
+
+	/**
+	 * Get width and height of the workarea element
+	 * Get visual area position from data-attribute
+	 * @param workarea {Element} jQuery workarea Element
+	 * @param data {Array} Visual area x1,y1,x2,y2 coordinates
+	 */
+	getCoordinates: function(workarea, data) {
+		this.img = {
+			w: workarea.outerWidth(),
+			h: workarea.outerHeight()
+		};
+
+		this.vis = {
+			w: data[2] - data[0],
+			h: data[3] - data[1],
+			x1: data[0]*1,
+			x2: data[2]*1,
+			y1: data[1]*1,
+			y2: data[3]*1
+		};
+	},
+
+	/**
+	 * Calculates x, y coordinates of visual-area center
+	 * Set this.crop to the calculated value
+	 */
+	getVisualAreaCropPercentage: function() {
+		var v = this.vis;
+		var i = this.img;
+
+		this.crop = {
+			left: v.x1 / (i.w - v.w),
+			top: v.y1 / (i.h - v.h)
+		};
+
+	},
+
+	/**
+	 * Get scale value for zooming
+	 * Get scale value for axis with scale-coefficient
+	 *
+	 * GetScale should get scale if only we are going to zoomin or zoomout;
+	 * When we cropping the image, getScale shouldn't run (should be set to 1 once)
+	 *
+	 * @param W {Number} Window width
+	 * @param H {Number} Window height
+	 * @param vis {Object} Visual zone properties (x1,x2,y1,y2,width,height}
+	 * @param img {Object} Background Image properties {width, height}
+	 * @returns {number} Scale coefficient
+	 */
+	getScale: function(W, H, vis, img) {
+		var abs = Math.abs;
+
+		/* base width, height calculation value (vis for zoom-out, img for zoom-in) */
+		var widthMode = (W < vis.w) ? vis.w : img.w;
+		var heightMode = (H < vis.h) ? vis.h : img.h;
+
+		var scaleWidth = W / widthMode;
+		var scaleHeight = H / heightMode;
+
+		/* return smaller scale value to fit by a "smaller axis" */
+		return ( (abs(scaleWidth) <= abs(scaleHeight)) ) ? scaleWidth : scaleHeight;
+	}
+};

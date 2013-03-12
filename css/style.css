@@ -79,12 +79,22 @@ h1 {
 
 body { font: 14px Tahoma, Arial, sans-serif; }
 
-.wrapper {
+.outerWrapper {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+}
+
+.wrapper {
+	width: 1488px;
+	height: 927px;
+	/*margin: 0 auto;*/
+	-webkit-transform-origin: top center;
+	margin: 0 auto;
+	/*transform-origin: 0 top 50% left;*/
+	/*overflow: hidden;*/
 	position: relative;
-	padding-bottom: 70px;
+	/*padding-bottom: 70px;*/
 	text-align: center;
 	vertical-align: middle;
 }
@@ -201,24 +211,27 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 
 /* CONTENT */
 .workArea {
-	/*width: 1488px;*/
-	width: auto;
+	width: 1488px;
 	height: 927px;
 	position: relative;
-	top: 50%;
-	left: 50%;
-	margin: -463px 0 0 -744px;
+	/*top: 50%;*/
+	top: 0;
+	/*left: 50%;*/
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
+	/*margin: 0 0 0 -744px;*/
+	/*margin-left: -744px;*/
 }
 .main {
 	background: url(../img/mainBg.jpg) no-repeat;
 }
 .alpiyka {
-	background: url(../img/konyk_big.jpg) no-repeat;
+	background: url(../img/kon_bg.jpg) no-repeat;
 }
 .konik {
-	background: url(../img/alpiyka_big.jpg) no-repeat;
+	background: url(../img/alp_bg.jpg) no-repeat;
 	height: 950px;
-	margin-top: -475px;
+	/*margin-top: -475px;*/
 }
 .map {
 	position: absolute;
