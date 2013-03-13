@@ -1,366 +1,321 @@
+Images = function () {
+	var shapes = [];
+	var shape_opacity = 0.4;
+	var r = null;
+	var image_handler = null;
+	var self = null;
 
-Images = function()
-{
-    var shapes = [];
-    var shape_opacity = 0.4;
-    var r = null;
-    var image_handler = null;
-    var self = null;
+	this.Init = function () {
+		self = this;
 
-    this.Init = function()
-    {
-        self = this;
+		r = Raphael('map', 1900, 1010);
+		image_handler = r;
 
-        r = Raphael('map',1900,1010);
-        image_handler = r;
+		$(".houseDescription .closeBtn").live('click', function () {
+			shape_out_handler();
+		});
 
-        $(".houseDescription .closeBtn").live('click', function(){
-            shape_out_handler();
-        });
+		$('div.map').live('click', function () {
+			shape_out_handler();
+		});
 
-        $('div.map').live('click', function()
-        {
-           shape_out_handler();
-        });
+		$('div.pin').live('click', function () {
+			shape_out_handler(1);
 
-        $('div.pin').live('click',function()
-        {
-        	shape_out_handler(1);
-        		
-            var win = $('div.houseDescription');
+			var win = $('div.houseDescription');
 
-            if($(win).is(':hidden'))
-            {
-                shape_over_handler(0,0,0,$(this).attr('array_index'));
-            }
-            else
-            {
-                $(win).attr('not_hide',true);
-            }
-        });
+			if ($(win).is(':hidden')) {
+				shape_over_handler(0, 0, 0, $(this).attr('array_index'));
+			}
+			else {
+				$(win).attr('not_hide', true);
+			}
+		});
 
-    }
+	}
 
-    this.createShape = function(points,attr)
-    {
-        var path = pointToPath(points);
-        var shape = r.path(path);
-        var pin_point = findPoint(points);
+	this.createShape = function (points, attr) {
+		var path = pointToPath(points);
+		var shape = r.path(path);
+		var pin_point = findPoint(points);
 
-        var construction_pin = '<div class="pin construction" array_index="' + shapes.length +'" style="top: ' + pin_point[1] + 'px; left: ' + pin_point[0] + 'px"></div>';
-        var soldFurnished = '<div class="pin soldFurnished" array_index="' + shapes.length +'"  style="top: ' + pin_point[1] + 'px; left: ' +pin_point[0] + 'px"></div>';
-        var sold = '<div class="pin sold" array_index="' + shapes.length +'"  style="top: ' + pin_point[1] + 'px; left: ' + pin_point[0] + 'px"></div>';
-				
-        shape.attr(
-        {
-            'stroke-width'  : 0,
-            "fill"          : '#000',
-            "fill-opacity"  : 0,
-            "class"         : shapes.length
-        });
+		var construction_pin = '<div class="pin construction" array_index="' + shapes.length + '" style="top: ' + pin_point[1] + 'px; left: ' + pin_point[0] + 'px"></div>';
+		var soldFurnished = '<div class="pin soldFurnished" array_index="' + shapes.length + '"  style="top: ' + pin_point[1] + 'px; left: ' + pin_point[0] + 'px"></div>';
+		var sold = '<div class="pin sold" array_index="' + shapes.length + '"  style="top: ' + pin_point[1] + 'px; left: ' + pin_point[0] + 'px"></div>';
 
-        if(attr.state == '0')
-        {
-            $('#map').append(construction_pin);
+		shape.attr(
+			{
+				'stroke-width': 0,
+				"fill": '#000',
+				"fill-opacity": 0,
+				"class": shapes.length
+			});
 
-            if(attr.state == '0')
-            {
-                shape.attr( {
-                    'stroke-width' : 0,
-                    "fill" : '#000',
-                    "fill-opacity" : shape_opacity
-                });
-            }
-        }
+		if (attr.state == '0') {
+			$('#map').append(construction_pin);
 
-        if(attr.state == '2' || attr.state == '1')
-        {
-            $('#map').append(sold);
-        }
+			if (attr.state == '0') {
+				shape.attr({
+					'stroke-width': 0,
+					"fill": '#000',
+					"fill-opacity": shape_opacity
+				});
+			}
+		}
 
-        if(attr.state == '3')
-        {
-            $('#map').append(soldFurnished);
-        }
+		if (attr.state == '2' || attr.state == '1') {
+			$('#map').append(sold);
+		}
 
-        shape.array_index = shapes.length;
+		if (attr.state == '3') {
+			$('#map').append(soldFurnished);
+		}
 
-        var pin = $('div.pin[array_index="' + shape.array_index + '"]');
+		shape.array_index = shapes.length;
 
-        $(pin).hover(pin_hover,pin_out_hover);
+		var pin = $('div.pin[array_index="' + shape.array_index + '"]');
 
-        shape.click(shape_over_handler);
-        shape.mouseover(shape_hover);
-        shape.mouseout(shape_out_hover);
+		$(pin).hover(pin_hover, pin_out_hover);
 
-        shapes.push({
-          'points' : points,
-          'shape' : shape,
-          'path' : path,
-          'attr' : attr,
-          'pin_point' : pin_point
-        });
+		shape.click(shape_over_handler);
+		shape.mouseover(shape_hover);
+		shape.mouseout(shape_out_hover);
 
-        return shapes.length;
-    }
+		shapes.push({
+			'points': points,
+			'shape': shape,
+			'path': path,
+			'attr': attr,
+			'pin_point': pin_point
+		});
 
-    var findPoint = function(points)
-    {
-        var min_width = 20000000 ;
-        var max_width = 0;
+		return shapes.length;
+	}
 
-        var min_height = 20000000;
-        var max_height = 0;
+	var findPoint = function (points) {
+		var min_width = 20000000;
+		var max_width = 0;
 
-        for(var i=0;i<points.length;i++)
-        {
+		var min_height = 20000000;
+		var max_height = 0;
 
-            if(points[i][1] < min_height)
-            {
-                min_height = points[i][1];
-            }
+		for (var i = 0; i < points.length; i++) {
 
-            if(points[i][1] > max_height)
-            {
-                max_height = points[i][1];
-            }
+			if (points[i][1] < min_height) {
+				min_height = points[i][1];
+			}
 
-            if(points[i][0] < min_width)
-            {
-                min_width = points[i][0];
-            }
+			if (points[i][1] > max_height) {
+				max_height = points[i][1];
+			}
 
-            if(parseInt(points[i][0]) > parseInt(max_width))
-            {
-                max_width = points[i][0];
-            }
-        }
-			
-        var width = (parseInt(min_width) + ((parseInt(max_width) - parseInt(min_width)) / 2)) - (42 / 2);
-        var height = (parseInt(min_height) + ((parseInt(max_height) - parseInt(min_height)) / 2)) - (58);
-			
-        return [width,height];
-    }
+			if (points[i][0] < min_width) {
+				min_width = points[i][0];
+			}
 
-    var pointToPath = function(points,isNew)
-    {
-        var path_string = "";
+			if (parseInt(points[i][0]) > parseInt(max_width)) {
+				max_width = points[i][0];
+			}
+		}
 
-        if(points.length > 0)
-        {
-            for(var i=0;i<points.length;i++)
-            {
-               if(i == 0)
-               {
-                   path_string = "M " + points[i][0] + " " + points[i][1];
-               }
+		var width = (parseInt(min_width) + ((parseInt(max_width) - parseInt(min_width)) / 2)) - (42 / 2);
+		var height = (parseInt(min_height) + ((parseInt(max_height) - parseInt(min_height)) / 2)) - (58);
 
-               path_string+= " L " + points[i][0] + " " + points[i][1];
-            }
+		return [width, height];
+	}
 
-            if(!isNew)
-                path_string+=" Z";
-        }
+	var pointToPath = function (points, isNew) {
+		var path_string = "";
 
-        return path_string;
-    }
+		if (points.length > 0) {
+			for (var i = 0; i < points.length; i++) {
+				if (i == 0) {
+					path_string = "M " + points[i][0] + " " + points[i][1];
+				}
 
-    var shape_over_handler = function(e,x,y,array_index)
-    {
-        var index = (array_index == undefined) ? this.array_index : array_index;
-        var win = $('div.houseDescription');
-        var bilding_data = shapes[index];
-        var pin_point = bilding_data.pin_point;
-        bilding_data = bilding_data.attr;
+				path_string += " L " + points[i][0] + " " + points[i][1];
+			}
 
-        $(win).attr('shape_over','true');
+			if (!isNew)
+				path_string += " Z";
+		}
 
-        if($(win).is(':hidden') || $(win).attr('building_id') != bilding_data['id'])
-        {
-            $(win).find('h3').html(bilding_data.name);
-						if(parseInt(bilding_data.square) > 800){
-							$(win).find('div.footage').html("<b>"+(parseInt(bilding_data.square) / 10000)+"</b> га")
-						}else{
-							$(win).find('div.footage').html("<b>"+bilding_data.square+"</b> м<sup>2</sup>")
-						}
-            //$(win).find('div.footage > b').html(bilding_data.square);
-            $(win).find('div.shortDesc').html(bilding_data.description);
+		return path_string;
+	}
 
-            $(win).find('div.photo').html('');
+	var shape_over_handler = function (e, x, y, array_index) {
+		var index = (array_index == undefined) ? this.array_index : array_index;
+		var win = $('div.houseDescription');
+		var bilding_data = shapes[index];
+		var pin_point = bilding_data.pin_point;
+		bilding_data = bilding_data.attr;
 
-            if(bilding_data['img'] != '')
-            {
-                var img = '<img>';
+		$(win).attr('shape_over', 'true');
 
-                $(win).find('div.photo').addClass('preload');
-                $(win).find('div.photo').append(img);
+		if ($(win).is(':hidden') || $(win).attr('building_id') != bilding_data['id']) {
+			$(win).find('h3').html(bilding_data.name);
+			if (parseInt(bilding_data.square) > 800) {
+				$(win).find('div.footage').html("<b>" + (parseInt(bilding_data.square) / 10000) + "</b> га")
+			} else {
+				$(win).find('div.footage').html("<b>" + bilding_data.square + "</b> м<sup>2</sup>")
+			}
+			//$(win).find('div.footage > b').html(bilding_data.square);
+			$(win).find('div.shortDesc').html(bilding_data.description);
 
-                $(win).find('div.photo > img').bind('load',function()
-                {
-                     $(win).find('div.photo').removeClass('preload');
-                });
+			$(win).find('div.photo').html('');
 
-                $(win).find('div.photo > img').attr('src',bilding_data['img']);
-            }
+			if (bilding_data['img'] != '') {
+				var img = '<img>';
 
-            if(bilding_data.state == '3')
-            {
-                $(win).find('div.interiorStatus, div.footage').addClass('furnished');
-                $(win).find('div.interiorStatus, div.footage').removeClass('nofurnished').removeClass('constructed');
-                $(win).find('div.interiorStatus').html("Продается меблированным");
-            }
+				$(win).find('div.photo').addClass('preload');
+				$(win).find('div.photo').append(img);
 
-            if(bilding_data.state == '2')
-            {
-                $(win).find('div.interiorStatus, div.footage').addClass('nofurnished');
-                $(win).find('div.interiorStatus, div.footage').removeClass('furnished').removeClass('constructed');
-                $(win).find('div.interiorStatus').html("Построен и продается");
-            }
+				$(win).find('div.photo > img').bind('load', function () {
+					$(win).find('div.photo').removeClass('preload');
+				});
 
-            if(bilding_data.state == '1' || bilding_data.state == '0')
-            {
-                $(win).find('div.interiorStatus, div.footage').addClass('constructed');
-                $(win).find('div.interiorStatus, div.footage').removeClass('furnished').removeClass('nofurnished');
+				$(win).find('div.photo > img').attr('src', bilding_data['img']);
+			}
 
-                if(bilding_data.state == '1')
-                {
-                  $(win).find('div.interiorStatus, div.footage').addClass('nofurnished');
+			if (bilding_data.state == '3') {
+				$(win).find('div.interiorStatus, div.footage').addClass('furnished');
+				$(win).find('div.interiorStatus, div.footage').removeClass('nofurnished').removeClass('constructed');
+				$(win).find('div.interiorStatus').html("Продается меблированным");
+			}
 
-	                $(win).find('div.interiorStatus, div.footage').removeClass('furnished').removeClass('constructed');
+			if (bilding_data.state == '2') {
+				$(win).find('div.interiorStatus, div.footage').addClass('nofurnished');
+				$(win).find('div.interiorStatus, div.footage').removeClass('furnished').removeClass('constructed');
+				$(win).find('div.interiorStatus').html("Построен и продается");
+			}
+
+			if (bilding_data.state == '1' || bilding_data.state == '0') {
+				$(win).find('div.interiorStatus, div.footage').addClass('constructed');
+				$(win).find('div.interiorStatus, div.footage').removeClass('furnished').removeClass('nofurnished');
+
+				if (bilding_data.state == '1') {
+					$(win).find('div.interiorStatus, div.footage').addClass('nofurnished');
+
+					$(win).find('div.interiorStatus, div.footage').removeClass('furnished').removeClass('constructed');
 					$(win).find('div.interiorStatus').html("Продается участок");
-                }
+				}
 
-                if(bilding_data.state == '0')
-                {
-                    $(win).find('div.interiorStatus').html("В стадии строительства");
-                }
+				if (bilding_data.state == '0') {
+					$(win).find('div.interiorStatus').html("В стадии строительства");
+				}
 
-            }
+			}
 
-            $('div.gallery').html('');
+			$('div.gallery').html('');
 
-            if(bilding_data.images.length > 0)
-            {
-                var img = "";
+			if (bilding_data.images.length > 0) {
+				var img = "";
 
-                for(var i=0;i<bilding_data.images.length;i++)
-                {
-                    img = ' <div class="smallPhoto"><img src="/user_files/building_place_images/small_' + bilding_data.images[i]['img'] + '" /></div>';
-                    $('div.gallery').append(img);
-                }
-            }
+				for (var i = 0; i < bilding_data.images.length; i++) {
+					img = ' <div class="smallPhoto"><img src="/user_files/building_place_images/small_' + bilding_data.images[i]['img'] + '" /></div>';
+					$('div.gallery').append(img);
+				}
+			}
 
-            var win_width = parseInt($(win).width());
-            var win_height = parseInt($(win).height());
-            var x = parseInt(pin_point[0]);
-            var y = parseInt(pin_point[1]);
+			var win_width = parseInt($(win).width());
+			var win_height = parseInt($(win).height());
+			var x = parseInt(pin_point[0]);
+			var y = parseInt(pin_point[1]);
 
-            window.innerWidth = window.innerWidth || document.documentElement.clientWidth;
-            window.innerHeight = window.innerHeight || document.documentElement.clientHeight;
+			window.innerWidth = window.innerWidth || document.documentElement.clientWidth;
+			window.innerHeight = window.innerHeight || document.documentElement.clientHeight;
 
-            var container_width = $('#city_block').width();
-            var offset_x = Math.floor((parseInt(container_width) - window.innerWidth) / 2);
-            var container_height = $('#city_block').height();
-            var offset_y = Math.floor((parseInt(container_height) - (window.innerHeight - 70)) / 2);
+			var container_width = $('#city_block').width();
+			var offset_x = Math.floor((parseInt(container_width) - window.innerWidth) / 2);
+			var container_height = $('#city_block').height();
+			var offset_y = Math.floor((parseInt(container_height) - (window.innerHeight - 70)) / 2);
 
-            x = x - offset_x;
-            y = y - offset_y;
+			x = x - offset_x;
+			y = y - offset_y;
 
-            if(x + win_width > window.innerWidth)
-            {
-                x = window.innerWidth - (win_width + 30);
-            }
+			if (x + win_width > window.innerWidth) {
+				x = window.innerWidth - (win_width + 30);
+			}
 
-            if(y + win_height > (window.innerHeight - 70))
-            {
-                y = (window.innerHeight - 70) - (win_height + 30);
-            }
+			if (y + win_height > (window.innerHeight - 70)) {
+				y = (window.innerHeight - 70) - (win_height + 30);
+			}
 
-            $(win).css('left',x);
-            $(win).css('top',y);
+			$(win).css('left', x);
+			$(win).css('top', y);
 
-            $(win).attr('building_id',bilding_data['id']);
-            $(win).attr('item',bilding_data['building_id']);
+			$(win).attr('building_id', bilding_data['id']);
+			$(win).attr('item', bilding_data['building_id']);
 
-            $(win).fadeIn();
-        }
-    }
+			$(win).fadeIn();
+		}
+	}
 
-    var shape_out_handler = function()
-    {
-        var win = $('div.houseDescription');
-        
-        $(win).removeAttr('shape_over');
-        $(win).removeAttr('not_hide');
+	var shape_out_handler = function () {
+		var win = $('div.houseDescription');
 
-        if($(win).is(':visible') && $(win).attr('not_hide') != 'true' &&
-            $(win).attr('shape_over') != 'true' )
-        {
-            $(win).removeAttr('building_id');
-            $(win).removeAttr('item');
-            if(arguments[0]){
-                $(win).hide();
-            }else{
-                $(win).fadeOut();
-            }
-        }
-    }
+		$(win).removeAttr('shape_over');
+		$(win).removeAttr('not_hide');
 
-    var shape_hover = function()
-    {
-        var pin = $('div.pin[array_index="' + this.array_index + '"]');
+		if ($(win).is(':visible') && $(win).attr('not_hide') != 'true' &&
+			$(win).attr('shape_over') != 'true') {
+			$(win).removeAttr('building_id');
+			$(win).removeAttr('item');
+			if (arguments[0]) {
+				$(win).hide();
+			} else {
+				$(win).fadeOut();
+			}
+		}
+	}
 
-        this.attr(
-        {
-            "fill-opacity" : 0.2
-        });
+	var shape_hover = function () {
+		var pin = $('div.pin[array_index="' + this.array_index + '"]');
 
-        $(pin).css('opacity',0.8);
-    }
+		this.attr(
+			{
+				"fill-opacity": 0.2
+			});
 
-    var shape_out_hover= function()
-    {
-        var shape = shapes[this.array_index];
-        var pin = $('div.pin[array_index="' + this.array_index + '"]');
+		$(pin).css('opacity', 0.8);
+	}
 
-        if(shape.attr.state == '0')
-        {
-           this.attr({"fill-opacity" : shape_opacity});
-        }
-        else
-        {
-            this.attr({ "fill-opacity" : 0});
-        }
+	var shape_out_hover = function () {
+		var shape = shapes[this.array_index];
+		var pin = $('div.pin[array_index="' + this.array_index + '"]');
 
-        $(pin).css('opacity',1);
-    }
+		if (shape.attr.state == '0') {
+			this.attr({"fill-opacity": shape_opacity});
+		}
+		else {
+			this.attr({ "fill-opacity": 0});
+		}
 
-    var pin_hover = function()
-    {
-        var shape =  shapes[$(this).attr("array_index")];
+		$(pin).css('opacity', 1);
+	}
 
-        $(this).css('opacity',0.8);
+	var pin_hover = function () {
+		var shape = shapes[$(this).attr("array_index")];
 
-        shape.shape.attr(
-        {
-            "fill-opacity" : 0.2
-        });
-    }
+		$(this).css('opacity', 0.8);
 
-    var pin_out_hover = function()
-    {
-        var shape =  shapes[$(this).attr("array_index")];
+		shape.shape.attr(
+			{
+				"fill-opacity": 0.2
+			});
+	}
 
-        if(shape.attr.state == '0')
-        {
-           shape.shape.attr({"fill-opacity" : shape_opacity});
-        }
-        else
-        {
-           shape.shape.attr({ "fill-opacity" : 0});
-        }
+	var pin_out_hover = function () {
+		var shape = shapes[$(this).attr("array_index")];
 
-        $(this).css('opacity',1);
-    }
+		if (shape.attr.state == '0') {
+			shape.shape.attr({"fill-opacity": shape_opacity});
+		}
+		else {
+			shape.shape.attr({ "fill-opacity": 0});
+		}
+
+		$(this).css('opacity', 1);
+	}
 }
 
