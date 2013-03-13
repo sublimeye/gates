@@ -334,7 +334,7 @@ $(document).ready(function () {
 		});
 
 		$(link).trigger('click');
-		win.fadeOut("500");
+		win.fadeOut(100);
 	})
 
 	/* Активация галереи изображений "Типовые фотографии" */
@@ -438,7 +438,7 @@ $(document).ready(function () {
 
 	/* Отобразить следующую фотографию */
 
-	$('div.photo >img').live('click', function () {
+	$('div.photo > img').live('click', function () {
 		var active_menu_item = ($('#additional_img').hasClass('active')) ? 0 : 1;
 		var parent = (!active_menu_item)
 			? $('div.additional_img')
@@ -775,6 +775,7 @@ $(document).ready(function () {
 
 	$('div.closeBtn').live('click', function () {
 		var link = $('#link_city').click();
+		$(document).trigger('popup.close');
 	});
 
 	/* Инициализация карты города */

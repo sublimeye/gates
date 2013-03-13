@@ -4,6 +4,7 @@ Images = function () {
 	var r = null;
 	var image_handler = null;
 	var self = null;
+	var isVisiblePopup = false;
 
 	this.Init = function () {
 		self = this;
@@ -15,24 +16,48 @@ Images = function () {
 			shape_out_handler();
 		});
 
+		/* additional event listener */
+		$(document).bind('popup.close', function() {
+			isVisiblePopup = false;
+		});
+
+		$(document).live('click', function(e) {
+			if ( !$(e.target).closest('.houseDescription, .houseCompleteDescription').length && isVisiblePopup) {
+
+				shape_out_handler('instant');
+				isVisiblePopup = false;
+			}
+		});
+
+		$(document).live('keydown', function( e ) {
+			if (e.which === 27 && isVisiblePopup) {
+				shape_out_handler('instant');
+				/* very ugly freaky and stupid hack , inherited from theCoder */
+				$('#link_city').click();
+				isVisiblePopup = false;
+			}
+		});
+
+		/* broken redundant stupid code */
 		$('div.map').live('click', function () {
 			shape_out_handler();
 		});
 
-		$('div.pin').live('click', function () {
+		$('div.pin').live('click', function (e) {
 			shape_out_handler(1);
 
 			var win = $('div.houseDescription');
 
 			if ($(win).is(':hidden')) {
-				shape_over_handler(0, 0, 0, $(this).attr('array_index'));
+				shape_over_handler(e, 0, 0, $(this).attr('array_index'));
 			}
 			else {
 				$(win).attr('not_hide', true);
 			}
 		});
 
-	}
+	};
+
 
 	this.createShape = function (points, attr) {
 		var path = pointToPath(points);
@@ -77,7 +102,9 @@ Images = function () {
 
 		$(pin).hover(pin_hover, pin_out_hover);
 
-		shape.click(shape_over_handler);
+		shape.click(function(e) {
+			shape_over_handler(e);
+		});
 		shape.mouseover(shape_hover);
 		shape.mouseout(shape_out_hover);
 
@@ -147,6 +174,11 @@ Images = function () {
 		var index = (array_index == undefined) ? this.array_index : array_index;
 		var win = $('div.houseDescription');
 		var bilding_data = shapes[index];
+
+		if (!bilding_data) {
+			return;
+		}
+
 		var pin_point = bilding_data.pin_point;
 		bilding_data = bilding_data.attr;
 
@@ -217,8 +249,8 @@ Images = function () {
 				}
 			}
 
-			var win_width = parseInt($(win).width());
-			var win_height = parseInt($(win).height());
+			/* retardation */
+/*
 			var x = parseInt(pin_point[0]);
 			var y = parseInt(pin_point[1]);
 
@@ -240,16 +272,39 @@ Images = function () {
 			if (y + win_height > (window.innerHeight - 70)) {
 				y = (window.innerHeight - 70) - (win_height + 30);
 			}
+*/
 
-			$(win).css('left', x);
-			$(win).css('top', y);
+//			var xe = e.pageX - $(e.target).offset().left;
+
+			var win_width = $(win).width();
+			var win_height = $(win).height();
+
+			var position = getMousePosition(e);
+
+			position.top -= win_height / 2;
+			position.left -= win_width / 2;
+
+			if (position.top < 0) {position.top = 20};
+			if (position.left < 0) {position.left = 20};
+
+			$(win).draggable();
+
+			$(win).css('left', position.left);
+			$(win).css('top', position.top);
 
 			$(win).attr('building_id', bilding_data['id']);
 			$(win).attr('item', bilding_data['building_id']);
 
-			$(win).fadeIn();
+			$(win).fadeIn('fast', function() {
+				isVisiblePopup = true;
+			});
 		}
 	}
+
+
+		getMousePosition = function(e) {
+			return {left: e.pageX, top: e.pageY};
+		};
 
 	var shape_out_handler = function () {
 		var win = $('div.houseDescription');
@@ -263,8 +318,11 @@ Images = function () {
 			$(win).removeAttr('item');
 			if (arguments[0]) {
 				$(win).hide();
+				isVisiblePopup = false;
 			} else {
-				$(win).fadeOut();
+				$(win).fadeOut('fast', function() {
+					isVisiblePopup = false;
+				});
 			}
 		}
 	}
