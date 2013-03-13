@@ -939,24 +939,16 @@ var mapResizer = {
 	fitToWindow: function() {
 		var W = this.$win.width();
 		var H = this.$win.height();
-		var scale = 1;
+		var scale;
 
 		this.setTransform('top left');
 
 		/* Window size is smaller than the active zone width or height => zoom out */
-		if ( W < this.vis.w || H < this.vis.h ) {
-
-			scale = this.getScale(W, H, true);
-
-		} else if ( W > this.img.w ) {
-
-			scale = this.getScale(W, H, false);
-
-		} else {
+		if ( !((W < this.vis.w || H < this.vis.h) || ( W > this.img.w)) ) {
 			this.setTransform('top center');
 		}
 
-
+		scale = this.getScale(W, H);
 		this.updateOffset(W, H, scale);
 		this.setScale( scale );
 	},
@@ -967,7 +959,10 @@ var mapResizer = {
 	 */
 	setScale: function(scale) {
 		if ( scale !== this.scale ) {
-			this.$wrapper.css('-webkit-transform', 'scale( ' + scale + ' )');
+			this.$wrapper.css({
+				'-webkit-transform': 'scale( ' + scale + ' )',
+				'transform': 'scale( ' + scale + ' )'
+			});
 			this.scale = scale;
 		}
 	},
@@ -978,7 +973,10 @@ var mapResizer = {
 	 */
 	setTransform: function(transform) {
 		if (this.origin !== transform) {
-			this.$wrapper.css('-webkit-transform-origin', transform );
+			this.$wrapper.css({
+				'-webkit-transform-origin': transform,
+				'transform-origin': transform
+			});
 			this.origin = transform;
 		}
 	},
@@ -1045,10 +1043,9 @@ var mapResizer = {
 
 	 * @param W {Number} Window width
 	 * @param H {Number} Window height
-	 * @param mode {Boolean} true if zoom-out, false if zoom-in
 	 * @returns {Number} Best fitting/calculated Scale index
 	 */
-	getScale: function(W, H, mode) {
+	getScale: function(W, H) {
 
 		/* base width, height calculation value (vis for zoom-out, img for zoom-in) */
 		var scaleWidthImg = W / this.img.w;
@@ -1064,15 +1061,18 @@ var mapResizer = {
 		/* zoom out mode */
 		if ( W < this.vis.w || H < this.vis.h ) {
 			return (scaleWidthVis <= scaleHeightVis) ? scaleWidthVis : scaleHeightVis;
+
+		} else if ( W > this.img.w ) {
+
+			/* zoom in mode */
+			if ( imgWidthDominatesImgHeight && visHeightDominatesImgWidth) { return scaleWidthImg; }
+			if ( imgWidthDominatesImgHeight && !visHeightDominatesImgWidth) { return scaleHeightVis; }
+
+			if ( !imgWidthDominatesImgHeight && visHeightDominatesImgWidth) { return scaleHeightImg; }
+			if ( !imgWidthDominatesImgHeight && !visHeightDominatesImgWidth) { return scaleWidthVis; }
 		}
 
-		/* zoom in mode */
-		if ( imgWidthDominatesImgHeight && visHeightDominatesImgWidth) { return scaleWidthImg; }
-		if ( imgWidthDominatesImgHeight && !visHeightDominatesImgWidth) { return scaleHeightVis; }
-
-		if ( !imgWidthDominatesImgHeight && visHeightDominatesImgWidth) { return scaleHeightImg; }
-		if ( !imgWidthDominatesImgHeight && !visHeightDominatesImgWidth) { return scaleWidthVis; }
-
+		/* crop */
 		return 1;
 	}
 };
