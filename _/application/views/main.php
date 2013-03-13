@@ -4,7 +4,7 @@
 
 <div class="outerWrapper">
 	<div class="wrapper">
-			<div class="workArea main js-workarea">
+			<div class="workArea main js-workarea" data-active-zone="92,253,924,750">
 					<div class="fixLabels">
 							<div class="label bigF obuh1">
 									Конча-Заспа

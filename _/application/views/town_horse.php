@@ -42,7 +42,7 @@
 <div class="outerWrapper">
 	<div class="wrapper">
 
-			<div class="workArea alpiyka js-workarea" id="city_block">
+			<div class="workArea alpiyka js-workarea" id="city_block" data-active-zone="92,253,924,750">
 
 					<div class="fixLabels">
 

@@ -483,9 +483,7 @@ $(document).ready(function () {
 
 		var segment = get_url_section(state.url, 5, location);
 
-		if (anchors_section_handler[segment] != undefined) {
-			anchors_section_handler[segment](segment);
-		}
+		anchors_section_handler[segment] && anchors_section_handler[segment](segment);
 
 		return false;
 	});
@@ -493,12 +491,15 @@ $(document).ready(function () {
 	/* Обработчик кнопок навигации браузера Вперед - Назад */
 
 	window.onpopstate = function (e) {
-		var segment = get_url_section(history.location.href, 5, location);
+		var segment;
 
-		if (anchors_section_handler[segment] != undefined) {
-			anchors_section_handler[segment](segment);
+		try {
+			segment = get_url_section(history.location.href, 5, location);
+			anchors_section_handler[segment] && anchors_section_handler[segment](segment);
 		}
-	}
+		catch(e) {}
+
+	};
 
 	/* Обработчик ссылок основного меню */
 
@@ -882,12 +883,14 @@ $(document).ready(function () {
 
 /**
  * Zoom or Crop Map
+ *
+ * Visual Area (vis): Area on the map with blurbs and buttons that should be always in view
+ * Crop:
+ *
  * @Dependencies:
  * 		for the first instance of .workArea -> addional .js-workarea must be added
  * 		for .js-workarea data-active-zone="92,253,924,750" attr must be set
  *
- *
- * @type {{$win: null, $wrapper: null, img: null, vis: null, crop: null, init: Function, events: Function, getElementsData: Function, fitToWindow: Function, setScale: Function, setTransform: Function, updateOffset: Function, clearOffset: Function, getCoordinates: Function, getVisualAreaCropPercentage: Function, getScale: Function}}
  */
 var mapResizer = {
 	$win: null,
@@ -895,10 +898,13 @@ var mapResizer = {
 	img: null,
 	vis: null,
 	crop: null,
+	scale: null,
+	origin: null,
 
 	init: function() {
 		this.getElementsData();
 		this.events();
+		this.fitToWindow();
 	},
 
 	events: function() {
@@ -922,43 +928,36 @@ var mapResizer = {
 	},
 
 	/**
-	 * Map fit to screen main func
-	 * Logic:
-	 * 	if window < ActiveArea -> zoom out
-	 * 	if window > activeArea < bgImage (smartCrop)
-	 * 	if window > bgImage (zoom in)
+	 * Performs main map-sizing logic
+	 * If Window size is bigger than the image, zoom-in (stretch to width, avoiding crop of the height important area)
+	 * If Window size is smaller than the image but bigger than VisualArea -> crop the image ( with a smart cropping offset,
+	 * keeping the Visual Area in the center of the window )
+	 * If Window size is smaller than VisualArea - zoom-out , until it becomes visible
+	 *
 	 * @returns {boolean}
 	 */
 	fitToWindow: function() {
 		var W = this.$win.width();
 		var H = this.$win.height();
-		var vis = this.vis;
-		var img = this.img;
 		var scale = 1;
 
-		/* Window size is smaller than the active zone width or height => zoom in */
-		if ( W < vis.w || H < vis.h ) {
-			// zoom out by smaller axis (x or y)
-			scale = this.getScale(W, H, vis, img);
-			this.setTransform('top left');
-		}
+		this.setTransform('top left');
 
-		/* window size is bigger than AZ */
-		/* but window size is smaller than image size => crop the image, add offset */
-		else if ( W < img.w || H < img.h ) {
-			// add top and||or left offset
-			// remove scale
-			this.updateOffset(W, H);
-			this.setTransform('top center');
-			this.setScale( 1 ); // 1
-			return false;
+		/* Window size is smaller than the active zone width or height => zoom out */
+		if ( W < this.vis.w || H < this.vis.h ) {
 
-		/* window size is bigger than image => zoom in the image */
+			scale = this.getScale(W, H, true);
+
+		} else if ( W > this.img.w ) {
+
+			scale = this.getScale(W, H, false);
+
 		} else {
-			this.clearOffset();
-			scale = this.getScale(W, H, vis, img);
+			this.setTransform('top center');
 		}
 
+
+		this.updateOffset(W, H, scale);
 		this.setScale( scale );
 	},
 
@@ -967,7 +966,10 @@ var mapResizer = {
 	 * @param scale {string} scale value
 	 */
 	setScale: function(scale) {
+		if ( scale !== this.scale ) {
 			this.$wrapper.css('-webkit-transform', 'scale( ' + scale + ' )');
+			this.scale = scale;
+		}
 	},
 
 	/**
@@ -975,36 +977,30 @@ var mapResizer = {
 	 * @param transform {string} origin aligning
 	 */
 	setTransform: function(transform) {
-		this.$wrapper.css('-webkit-transform-origin', transform );
+		if (this.origin !== transform) {
+			this.$wrapper.css('-webkit-transform-origin', transform );
+			this.origin = transform;
+		}
 	},
 
-	/* TODO: refactor this */
 	/**
-	 * Updates CSS margin property of the .wrapper element
+	 * Updates CSS margin property of the .wrapper element, considering scale index
 	 * @param W {Number} Window width
 	 * @param H {Number} Window height
+	 * @param scale {Number} Scale index
 	 */
-	updateOffset: function(W, H) {
-		var overflowX = this.img.w - W;
-		var overflowY = this.img.h - H;
+	updateOffset: function(W, H, scale) {
+		var overflowX = this.img.w * scale - W;
+		var overflowY = this.img.h * scale - H;
 
-		if (overflowX < 0) {overflowX = 0}
-		if (overflowY < 0) {overflowY = 0}
-
-		var offsetValueX = overflowX ? overflowX * this.crop.left : 0;
-		var offsetValueY = overflowY ? overflowY * this.crop.top : 0;
+		var offsetValueX = (overflowX > 0) ? overflowX * this.crop.left : 0;
+		var offsetValueY = (overflowY > 0) ? overflowY * this.crop.top : 0;
 
 		this.$wrapper.css({
 			'margin-left': -offsetValueX + 'px',
 			'margin-top': -offsetValueY + 'px'
 		});
-	},
 
-	/**
-	 * Set .wrapper margin to the basic '0 auto' values (for crop & zoom-in modes)
-	 */
-	clearOffset: function() {
-		this.$wrapper.css('margin', '0 auto');
 	},
 
 	/**
@@ -1022,52 +1018,61 @@ var mapResizer = {
 		this.vis = {
 			w: data[2] - data[0],
 			h: data[3] - data[1],
-			x1: data[0]*1,
-			x2: data[2]*1,
-			y1: data[1]*1,
-			y2: data[3]*1
+			left: -(-data[0]),
+			top: -(-data[1])
 		};
 	},
 
 	/**
-	 * Calculates x, y coordinates of visual-area center
-	 * Set this.crop to the calculated value
+	 * Calculates Visual Area Left / Top pos, to image size ratio
+	 * Set "this.crop" prop
 	 */
 	getVisualAreaCropPercentage: function() {
-		var v = this.vis;
-		var i = this.img;
-
 		this.crop = {
-			left: v.x1 / (i.w - v.w),
-			top: v.y1 / (i.h - v.h)
+			left: this.vis.left / (this.img.w - this.vis.w),
+			top: this.vis.top / (this.img.h - this.vis.h)
 		};
-
 	},
 
 	/**
-	 * Get scale value for zooming
-	 * Get scale value for axis with scale-coefficient
+	 * If zooming-out: find less side scale index (so that other side VisualArea wouldn't be cropped)
+	 * If zooming-in: Find scale index of the side that is overextended more, and if other side's Visual Area
+	 * with a such scaling index wouldn't be cropped, use it. Otherwise, return VisualArea scaling index.
 	 *
-	 * GetScale should get scale if only we are going to zoomin or zoomout;
-	 * When we cropping the image, getScale shouldn't run (should be set to 1 once)
-	 *
+	 * When it's being zooming-in, we try to avoid blank(white)-spaces on the sides (vertical/horizontal),
+	 * and try to stretch the image where these blank-spaces are bigger. But only if we wouldn't crop VisualArea of
+	 * the other side, due to zoom-in.
+
 	 * @param W {Number} Window width
 	 * @param H {Number} Window height
-	 * @param vis {Object} Visual zone properties (x1,x2,y1,y2,width,height}
-	 * @param img {Object} Background Image properties {width, height}
-	 * @returns {number} Scale coefficient
+	 * @param mode {Boolean} true if zoom-out, false if zoom-in
+	 * @returns {Number} Best fitting/calculated Scale index
 	 */
-	getScale: function(W, H, vis, img) {
-		var abs = Math.abs;
+	getScale: function(W, H, mode) {
 
 		/* base width, height calculation value (vis for zoom-out, img for zoom-in) */
-		var widthMode = (W < vis.w) ? vis.w : img.w;
-		var heightMode = (H < vis.h) ? vis.h : img.h;
+		var scaleWidthImg = W / this.img.w;
+		var scaleHeightImg = H / this.img.h;
 
-		var scaleWidth = W / widthMode;
-		var scaleHeight = H / heightMode;
+		var scaleWidthVis = W / this.vis.w;
+		var scaleHeightVis = H / this.vis.h;
 
-		/* return smaller scale value to fit by a "smaller axis" */
-		return ( (abs(scaleWidth) <= abs(scaleHeight)) ) ? scaleWidth : scaleHeight;
+		var visHeightDominatesImgWidth = scaleWidthImg < scaleHeightVis;
+		var imgWidthDominatesImgHeight = scaleWidthImg >= scaleHeightImg;
+
+
+		/* zoom out mode */
+		if ( W < this.vis.w || H < this.vis.h ) {
+			return (scaleWidthVis <= scaleHeightVis) ? scaleWidthVis : scaleHeightVis;
+		}
+
+		/* zoom in mode */
+		if ( imgWidthDominatesImgHeight && visHeightDominatesImgWidth) { return scaleWidthImg; }
+		if ( imgWidthDominatesImgHeight && !visHeightDominatesImgWidth) { return scaleHeightVis; }
+
+		if ( !imgWidthDominatesImgHeight && visHeightDominatesImgWidth) { return scaleHeightImg; }
+		if ( !imgWidthDominatesImgHeight && !visHeightDominatesImgWidth) { return scaleWidthVis; }
+
+		return 1;
 	}
 };
