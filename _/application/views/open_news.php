@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <div class="houseDescription newsWin" style="display:none;">
-    <div class="closeBtn"></div>
+    <div class="closeBtn" title="Закрыть окно [Кнопка ESC]"></div>
 
     <div class="scrollContent">
 

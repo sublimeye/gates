@@ -1055,8 +1055,8 @@ var mapResizer = {
 		var scaleWidthVis = W / this.vis.w;
 		var scaleHeightVis = H / this.vis.h;
 
-		var visHeightDominatesImgWidth = scaleWidthImg < scaleHeightVis;
-		var imgWidthDominatesImgHeight = scaleWidthImg >= scaleHeightImg;
+		var isVisHeightDominatesImgWidth = scaleWidthImg < scaleHeightVis;
+		var isImgWidthDominatesImgHeight = scaleWidthImg >= scaleHeightImg;
 
 
 		/* zoom out mode */
@@ -1066,11 +1066,11 @@ var mapResizer = {
 		} else if ( W > this.img.w ) {
 
 			/* zoom in mode */
-			if ( imgWidthDominatesImgHeight && visHeightDominatesImgWidth) { return scaleWidthImg; }
-			if ( imgWidthDominatesImgHeight && !visHeightDominatesImgWidth) { return scaleHeightVis; }
+			if ( isImgWidthDominatesImgHeight && isVisHeightDominatesImgWidth) { return scaleWidthImg; }
+			if ( isImgWidthDominatesImgHeight && !isVisHeightDominatesImgWidth) { return scaleHeightVis; }
 
-			if ( !imgWidthDominatesImgHeight && visHeightDominatesImgWidth) { return scaleHeightImg; }
-			if ( !imgWidthDominatesImgHeight && !visHeightDominatesImgWidth) { return scaleWidthVis; }
+			if ( !isImgWidthDominatesImgHeight && isVisHeightDominatesImgWidth) { return scaleHeightImg; }
+			if ( !isImgWidthDominatesImgHeight && !isVisHeightDominatesImgWidth) { return scaleWidthVis; }
 		}
 
 		/* crop */

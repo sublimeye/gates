@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <div class="houseCompleteDescription" style="z-index:60010;display:none;">
-  <div class="closeBtn"></div>
+  <div class="closeBtn" title="Закрыть окно [Кнопка ESC]"></div>
   <div class="hiddenBlock">
       <h1><?php echo $this->get('building.name')?></h1>
       <div class="menu">

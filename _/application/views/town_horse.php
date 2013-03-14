@@ -150,7 +150,7 @@
 </div>
 
 <div class="houseDescription">
-    <div class="closeBtn"></div>
+    <div class="closeBtn" title="Закрыть окно [Кнопка ESC]"></div>
 
     <h3></h3>
     <div class="footage"> <b></b> м<sup>2</sup></div>
