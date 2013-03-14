@@ -16,7 +16,7 @@
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; height: 100%; }
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
-body { margin: 0; height: 100%; }
+body { margin: 0; height: 100%; overflow: hidden; }
 
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
@@ -88,13 +88,11 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 .wrapper {
 	width: 1488px;
 	height: 927px;
-	/*margin: 0 auto;*/
-	-webkit-transform-origin: top center;
+
+	/*width: 1902px;*/
+	/*height: 950px;*/
 	margin: 0 auto;
-	/*transform-origin: 0 top 50% left;*/
-	/*overflow: hidden;*/
 	position: relative;
-	/*padding-bottom: 70px;*/
 	text-align: center;
 	vertical-align: middle;
 }
@@ -217,10 +215,6 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	/*top: 50%;*/
 	top: 0;
 	/*left: 50%;*/
-	/*margin-left: auto;*/
-	/*margin-right: auto;*/
-	/*margin: 0 0 0 -744px;*/
-	/*margin-left: -744px;*/
 }
 .main {
 	background: url(../img/mainBg.jpg) no-repeat;
@@ -229,8 +223,8 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	background: url(../img/kon_bg.jpg) no-repeat;
 }
 .konik {
-	background: url(../img/alp_bg.jpg) no-repeat;
-	height: 950px;
+	background: url(../img/alpiyka_big.jpg) no-repeat;
+	/*height: 950px;*/
 	/*margin-top: -475px;*/
 }
 .map {
@@ -1334,4 +1328,21 @@ iframe {
 }
 .link-to-another:hover {
 	opacity: 0.8;
+}
+
+/* ui-improvements */
+.ui-draggable {
+	cursor: move;
+}
+
+.houseDescription .photo,
+.houseDescription .smallPhoto
+{
+	cursor: pointer;
+}
+
+
+.houseDescription .photo:hover,
+.houseDescription .smallPhoto:hover {
+	/*box-shadow: 0 0 5px 1px rgba(0,0,0,.5);*/
 }

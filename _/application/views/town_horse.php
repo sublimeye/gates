@@ -2,7 +2,8 @@
 
 <?php $this->load->view('header')?>
 
-<script src="/js//jquery.tools.min.js"></script>
+<script src="/js/jquery.tools.min.js"></script>
+<script src="/js/jquery-ui-1.10.1.custom.min.js"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
     
 <script type="text/javascript" src="/js/history.js"></script>
@@ -42,7 +43,7 @@
 <div class="outerWrapper">
 	<div class="wrapper">
 
-			<div class="workArea alpiyka js-workarea" id="city_block" data-active-zone="92,253,924,750">
+			<div class="workArea alpiyka js-workarea" id="city_block" data-active-zone="155,155,1000,700">
 
 					<div class="fixLabels">
 
