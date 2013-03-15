@@ -1,0 +1,1889 @@
+==== 15.03.2013/13:20:26/0.93211200 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:20:50/0.91680600 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:21:05/0.95926400 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:21:19/0.21971500 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:21:28/0.25514900 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:21:42/0.09017000 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:22:56/0.07223300 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:26:05/0.13856600 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:26:14/0.80624600 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:27:21/0.44170700 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:34:31/0.76180200 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:35:34/0.33215100 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:44:54/0.29013900 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:45:15/0.35730000 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:46:13/0.74981400 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:46:27/0.61812200 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:46:40/0.74399500 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:47:10/0.20938400 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:47:19/0.61898200 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:47:36/0.77423600 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:47:59/0.07122300 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:48:12/0.95090400 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:48:47/0.25507800 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:50:25/0.03033600 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:50:29/0.22500100 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:50:33/0.18961000 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:50:46/0.94062500 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:51:03/0.22328800 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:51:18/0.54366000 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:51:32/0.40859700 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:52:48/0.75828800 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:53:07/0.96546600 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:53:45/0.31768900 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:54:20/0.49867900 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:56:42/0.42016800 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:57:00/0.17893700 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 1
+LIMIT 1
+==== 15.03.2013/13:57:00/0.18405700 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:57:00/0.18868500 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 1
+AND `enabled` = 1
+==== 15.03.2013/13:57:00/0.19405500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '43'
+LIMIT 4
+==== 15.03.2013/13:57:00/0.19745500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '44'
+LIMIT 4
+==== 15.03.2013/13:57:00/0.20059900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '46'
+LIMIT 4
+==== 15.03.2013/13:57:00/0.20403100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '45'
+LIMIT 4
+==== 15.03.2013/13:57:00/0.20717300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '47'
+LIMIT 4
+==== 15.03.2013/13:57:00/0.21082300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '48'
+LIMIT 4
+==== 15.03.2013/13:57:00/0.21408100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '49'
+LIMIT 4
+==== 15.03.2013/13:57:00/0.21737500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '51'
+LIMIT 4
+==== 15.03.2013/13:57:00/0.22062800 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '50'
+LIMIT 4
+==== 15.03.2013/13:57:00/0.22383300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '52'
+LIMIT 4
+==== 15.03.2013/13:57:05/0.04649600 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:58:28/0.12437700 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/13:59:48/0.78013100 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:42:54/0.98328400 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:45:37/0.67946100 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 1
+LIMIT 1
+==== 15.03.2013/14:45:37/0.68480000 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:45:37/0.68984800 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 1
+AND `enabled` = 1
+==== 15.03.2013/14:45:37/0.69526900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '43'
+LIMIT 4
+==== 15.03.2013/14:45:37/0.69893100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '44'
+LIMIT 4
+==== 15.03.2013/14:45:37/0.70220000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '46'
+LIMIT 4
+==== 15.03.2013/14:45:37/0.70576300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '45'
+LIMIT 4
+==== 15.03.2013/14:45:37/0.70927200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '47'
+LIMIT 4
+==== 15.03.2013/14:45:37/0.71263300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '48'
+LIMIT 4
+==== 15.03.2013/14:45:37/0.71587000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '49'
+LIMIT 4
+==== 15.03.2013/14:45:37/0.71915600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '51'
+LIMIT 4
+==== 15.03.2013/14:45:37/0.72255300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '50'
+LIMIT 4
+==== 15.03.2013/14:45:37/0.72595100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '52'
+LIMIT 4
+==== 15.03.2013/14:45:41/0.14794500 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 1
+LIMIT 1
+==== 15.03.2013/14:45:41/0.15323000 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:45:41/0.15813000 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 1
+AND `enabled` = 1
+==== 15.03.2013/14:45:41/0.16337600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '43'
+LIMIT 4
+==== 15.03.2013/14:45:41/0.16692800 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '44'
+LIMIT 4
+==== 15.03.2013/14:45:41/0.17017300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '46'
+LIMIT 4
+==== 15.03.2013/14:45:41/0.17466800 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '45'
+LIMIT 4
+==== 15.03.2013/14:45:41/0.17800600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '47'
+LIMIT 4
+==== 15.03.2013/14:45:41/0.18147500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '48'
+LIMIT 4
+==== 15.03.2013/14:45:41/0.18497200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '49'
+LIMIT 4
+==== 15.03.2013/14:45:41/0.18829300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '51'
+LIMIT 4
+==== 15.03.2013/14:45:41/0.19166900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '50'
+LIMIT 4
+==== 15.03.2013/14:45:41/0.19500000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '52'
+LIMIT 4
+==== 15.03.2013/14:48:04/0.30506100 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 1
+LIMIT 1
+==== 15.03.2013/14:48:04/0.31056600 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:48:04/0.31595700 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 1
+AND `enabled` = 1
+==== 15.03.2013/14:48:04/0.32150400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '43'
+LIMIT 4
+==== 15.03.2013/14:48:04/0.32525600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '44'
+LIMIT 4
+==== 15.03.2013/14:48:04/0.32856400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '46'
+LIMIT 4
+==== 15.03.2013/14:48:04/0.33185900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '45'
+LIMIT 4
+==== 15.03.2013/14:48:04/0.33531300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '47'
+LIMIT 4
+==== 15.03.2013/14:48:04/0.33889200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '48'
+LIMIT 4
+==== 15.03.2013/14:48:04/0.34217300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '49'
+LIMIT 4
+==== 15.03.2013/14:48:04/0.34550500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '51'
+LIMIT 4
+==== 15.03.2013/14:48:04/0.34876600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '50'
+LIMIT 4
+==== 15.03.2013/14:48:04/0.35217700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '52'
+LIMIT 4
+==== 15.03.2013/14:48:08/0.80749800 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 1
+LIMIT 1
+==== 15.03.2013/14:48:08/0.81331300 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:48:08/0.81945100 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 1
+AND `enabled` = 1
+==== 15.03.2013/14:48:08/0.82606700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '43'
+LIMIT 4
+==== 15.03.2013/14:48:08/0.83066900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '44'
+LIMIT 4
+==== 15.03.2013/14:48:08/0.83504200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '46'
+LIMIT 4
+==== 15.03.2013/14:48:08/0.83932600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '45'
+LIMIT 4
+==== 15.03.2013/14:48:08/0.84364100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '47'
+LIMIT 4
+==== 15.03.2013/14:48:08/0.84792800 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '48'
+LIMIT 4
+==== 15.03.2013/14:48:08/0.85270300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '49'
+LIMIT 4
+==== 15.03.2013/14:48:08/0.85698600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '51'
+LIMIT 4
+==== 15.03.2013/14:48:08/0.86111700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '50'
+LIMIT 4
+==== 15.03.2013/14:48:08/0.86551600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '52'
+LIMIT 4
+==== 15.03.2013/14:49:04/0.07377600 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 1
+LIMIT 1
+==== 15.03.2013/14:49:04/0.07915100 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:49:04/0.08464200 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 1
+AND `enabled` = 1
+==== 15.03.2013/14:49:04/0.09048200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '43'
+LIMIT 4
+==== 15.03.2013/14:49:04/0.09422900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '44'
+LIMIT 4
+==== 15.03.2013/14:49:04/0.09780700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '46'
+LIMIT 4
+==== 15.03.2013/14:49:04/0.10133700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '45'
+LIMIT 4
+==== 15.03.2013/14:49:04/0.10469000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '47'
+LIMIT 4
+==== 15.03.2013/14:49:04/0.10794000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '48'
+LIMIT 4
+==== 15.03.2013/14:49:04/0.11137000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '49'
+LIMIT 4
+==== 15.03.2013/14:49:04/0.11482100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '51'
+LIMIT 4
+==== 15.03.2013/14:49:04/0.11859900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '50'
+LIMIT 4
+==== 15.03.2013/14:49:04/0.12213900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '52'
+LIMIT 4
+==== 15.03.2013/14:55:26/0.19337000 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 1
+LIMIT 1
+==== 15.03.2013/14:55:26/0.19863200 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:55:26/0.20372400 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 1
+AND `enabled` = 1
+==== 15.03.2013/14:55:26/0.20905200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '43'
+LIMIT 4
+==== 15.03.2013/14:55:26/0.21277800 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '44'
+LIMIT 4
+==== 15.03.2013/14:55:26/0.21621300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '46'
+LIMIT 4
+==== 15.03.2013/14:55:26/0.21968800 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '45'
+LIMIT 4
+==== 15.03.2013/14:55:26/0.22307400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '47'
+LIMIT 4
+==== 15.03.2013/14:55:26/0.22649700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '48'
+LIMIT 4
+==== 15.03.2013/14:55:26/0.22971900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '49'
+LIMIT 4
+==== 15.03.2013/14:55:26/0.23297900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '51'
+LIMIT 4
+==== 15.03.2013/14:55:26/0.23645300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '50'
+LIMIT 4
+==== 15.03.2013/14:55:26/0.24011900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '52'
+LIMIT 4
+==== 15.03.2013/14:56:15/0.82665900 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:56:30/0.85696600 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:57:11/0.58400100 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:57:21/0.29846200 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:57:27/0.63237300 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:58:50/0.56191200 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:59:12/0.10612700 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:59:29/0.98223800 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:59:37/0.30916200 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/14:59:58/0.62813000 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:00:17/0.67694500 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:03:06/0.43567900 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:03:20/0.05692800 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:03:25/0.59916500 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:04:10/0.66744000 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:04:16/0.65986800 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:07:22/0.68320600 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:07:43/0.42877400 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:07:49/0.17484200 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 2
+LIMIT 1
+==== 15.03.2013/15:07:49/0.18045000 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:07:49/0.18535700 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 2
+AND `enabled` = 1
+==== 15.03.2013/15:07:49/0.19004400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '32'
+LIMIT 4
+==== 15.03.2013/15:07:49/0.19361600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '34'
+LIMIT 4
+==== 15.03.2013/15:07:49/0.19711000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '30'
+LIMIT 4
+==== 15.03.2013/15:07:49/0.20047200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '31'
+LIMIT 4
+==== 15.03.2013/15:07:49/0.20392600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '33'
+LIMIT 4
+==== 15.03.2013/15:07:49/0.20745700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '38'
+LIMIT 4
+==== 15.03.2013/15:07:49/0.21102800 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '39'
+LIMIT 4
+==== 15.03.2013/15:07:49/0.21438600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '27'
+LIMIT 4
+==== 15.03.2013/15:07:49/0.21782500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '40'
+LIMIT 4
+==== 15.03.2013/15:07:49/0.22112600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '41'
+LIMIT 4
+==== 15.03.2013/15:07:49/0.22435800 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '42'
+LIMIT 4
+==== 15.03.2013/15:07:51/0.67067000 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:07:55/0.82344600 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 2
+LIMIT 1
+==== 15.03.2013/15:07:55/0.82877300 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:07:55/0.83363700 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 2
+AND `enabled` = 1
+==== 15.03.2013/15:07:55/0.83850600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '32'
+LIMIT 4
+==== 15.03.2013/15:07:55/0.84213100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '34'
+LIMIT 4
+==== 15.03.2013/15:07:55/0.84560600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '30'
+LIMIT 4
+==== 15.03.2013/15:07:55/0.84907900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '31'
+LIMIT 4
+==== 15.03.2013/15:07:55/0.85245700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '33'
+LIMIT 4
+==== 15.03.2013/15:07:55/0.85569000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '38'
+LIMIT 4
+==== 15.03.2013/15:07:55/0.85914900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '39'
+LIMIT 4
+==== 15.03.2013/15:07:55/0.86261100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '27'
+LIMIT 4
+==== 15.03.2013/15:07:55/0.86602400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '40'
+LIMIT 4
+==== 15.03.2013/15:07:55/0.86925500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '41'
+LIMIT 4
+==== 15.03.2013/15:07:55/0.87278900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '42'
+LIMIT 4
+==== 15.03.2013/15:07:57/0.23246900 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:08:01/0.38622300 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 2
+LIMIT 1
+==== 15.03.2013/15:08:01/0.39186900 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:08:01/0.39679900 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 2
+AND `enabled` = 1
+==== 15.03.2013/15:08:01/0.40158400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '32'
+LIMIT 4
+==== 15.03.2013/15:08:01/0.40498700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '34'
+LIMIT 4
+==== 15.03.2013/15:08:01/0.40835800 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '30'
+LIMIT 4
+==== 15.03.2013/15:08:01/0.41178500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '31'
+LIMIT 4
+==== 15.03.2013/15:08:01/0.41512400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '33'
+LIMIT 4
+==== 15.03.2013/15:08:01/0.41843300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '38'
+LIMIT 4
+==== 15.03.2013/15:08:01/0.42181700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '39'
+LIMIT 4
+==== 15.03.2013/15:08:01/0.42515000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '27'
+LIMIT 4
+==== 15.03.2013/15:08:01/0.42835200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '40'
+LIMIT 4
+==== 15.03.2013/15:08:01/0.43158700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '41'
+LIMIT 4
+==== 15.03.2013/15:08:01/0.43487700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '42'
+LIMIT 4
+==== 15.03.2013/15:08:02/0.53502900 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:08:05/0.35577100 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 2
+LIMIT 1
+==== 15.03.2013/15:08:05/0.36106900 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:08:05/0.36585900 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 2
+AND `enabled` = 1
+==== 15.03.2013/15:08:05/0.37068300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '32'
+LIMIT 4
+==== 15.03.2013/15:08:05/0.37435400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '34'
+LIMIT 4
+==== 15.03.2013/15:08:05/0.37807200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '30'
+LIMIT 4
+==== 15.03.2013/15:08:05/0.38152700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '31'
+LIMIT 4
+==== 15.03.2013/15:08:05/0.38487300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '33'
+LIMIT 4
+==== 15.03.2013/15:08:05/0.38828800 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '38'
+LIMIT 4
+==== 15.03.2013/15:08:05/0.39171900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '39'
+LIMIT 4
+==== 15.03.2013/15:08:05/0.39503300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '27'
+LIMIT 4
+==== 15.03.2013/15:08:05/0.39846600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '40'
+LIMIT 4
+==== 15.03.2013/15:08:05/0.40169300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '41'
+LIMIT 4
+==== 15.03.2013/15:08:05/0.40503700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '42'
+LIMIT 4
+==== 15.03.2013/15:08:06/0.26693200 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 1
+LIMIT 1
+==== 15.03.2013/15:08:06/0.27297400 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:08:06/0.27788200 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 1
+AND `enabled` = 1
+==== 15.03.2013/15:08:06/0.28331300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '43'
+LIMIT 4
+==== 15.03.2013/15:08:06/0.28693200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '44'
+LIMIT 4
+==== 15.03.2013/15:08:06/0.29034900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '46'
+LIMIT 4
+==== 15.03.2013/15:08:06/0.29356700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '45'
+LIMIT 4
+==== 15.03.2013/15:08:06/0.29712000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '47'
+LIMIT 4
+==== 15.03.2013/15:08:06/0.30059200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '48'
+LIMIT 4
+==== 15.03.2013/15:08:06/0.30381700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '49'
+LIMIT 4
+==== 15.03.2013/15:08:06/0.30719900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '51'
+LIMIT 4
+==== 15.03.2013/15:08:06/0.31091700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '50'
+LIMIT 4
+==== 15.03.2013/15:08:06/0.31436300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '52'
+LIMIT 4
+==== 15.03.2013/15:08:09/0.33851900 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:08:12/0.82979100 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 1
+LIMIT 1
+==== 15.03.2013/15:08:12/0.83535400 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:08:12/0.84036100 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 1
+AND `enabled` = 1
+==== 15.03.2013/15:08:12/0.84572000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '43'
+LIMIT 4
+==== 15.03.2013/15:08:12/0.84940100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '44'
+LIMIT 4
+==== 15.03.2013/15:08:12/0.85293000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '46'
+LIMIT 4
+==== 15.03.2013/15:08:12/0.85629000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '45'
+LIMIT 4
+==== 15.03.2013/15:08:12/0.85972100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '47'
+LIMIT 4
+==== 15.03.2013/15:08:12/0.86311100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '48'
+LIMIT 4
+==== 15.03.2013/15:08:12/0.86660400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '49'
+LIMIT 4
+==== 15.03.2013/15:08:12/0.87005100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '51'
+LIMIT 4
+==== 15.03.2013/15:08:12/0.87350100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '50'
+LIMIT 4
+==== 15.03.2013/15:08:12/0.87690900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '52'
+LIMIT 4
+==== 15.03.2013/15:08:13/0.71151800 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 1
+LIMIT 1
+==== 15.03.2013/15:08:13/0.71703600 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:08:13/0.72223400 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 1
+AND `enabled` = 1
+==== 15.03.2013/15:08:13/0.72747000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '43'
+LIMIT 4
+==== 15.03.2013/15:08:13/0.73108400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '44'
+LIMIT 4
+==== 15.03.2013/15:08:13/0.73459100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '46'
+LIMIT 4
+==== 15.03.2013/15:08:13/0.73804700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '45'
+LIMIT 4
+==== 15.03.2013/15:08:13/0.74134900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '47'
+LIMIT 4
+==== 15.03.2013/15:08:13/0.74469900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '48'
+LIMIT 4
+==== 15.03.2013/15:08:13/0.74796400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '49'
+LIMIT 4
+==== 15.03.2013/15:08:13/0.75148000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '51'
+LIMIT 4
+==== 15.03.2013/15:08:13/0.75495400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '50'
+LIMIT 4
+==== 15.03.2013/15:08:13/0.75824500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '52'
+LIMIT 4
+==== 15.03.2013/15:08:16/0.89655800 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:17:10/0.76260900 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 2
+LIMIT 1
+==== 15.03.2013/15:17:10/0.76844400 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:17:10/0.77360900 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 2
+AND `enabled` = 1
+==== 15.03.2013/15:17:10/0.77865400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '32'
+LIMIT 4
+==== 15.03.2013/15:17:10/0.78235800 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '34'
+LIMIT 4
+==== 15.03.2013/15:17:10/0.78568200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '30'
+LIMIT 4
+==== 15.03.2013/15:17:10/0.78899200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '31'
+LIMIT 4
+==== 15.03.2013/15:17:10/0.79226000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '33'
+LIMIT 4
+==== 15.03.2013/15:17:10/0.79565700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '38'
+LIMIT 4
+==== 15.03.2013/15:17:10/0.79925100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '39'
+LIMIT 4
+==== 15.03.2013/15:17:10/0.80265600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '27'
+LIMIT 4
+==== 15.03.2013/15:17:10/0.80623100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '40'
+LIMIT 4
+==== 15.03.2013/15:17:10/0.80969400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '41'
+LIMIT 4
+==== 15.03.2013/15:17:10/0.81332900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '42'
+LIMIT 4
+==== 15.03.2013/15:17:12/0.38376600 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:17:21/0.12157600 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:17:23/0.87852900 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:17:24/0.89306300 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 1
+LIMIT 1
+==== 15.03.2013/15:17:24/0.89893300 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:17:24/0.90484000 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 1
+AND `enabled` = 1
+==== 15.03.2013/15:17:24/0.91150700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '43'
+LIMIT 4
+==== 15.03.2013/15:17:24/0.91569300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '44'
+LIMIT 4
+==== 15.03.2013/15:17:24/0.91965500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '46'
+LIMIT 4
+==== 15.03.2013/15:17:24/0.92328000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '45'
+LIMIT 4
+==== 15.03.2013/15:17:24/0.92922900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '47'
+LIMIT 4
+==== 15.03.2013/15:17:24/0.93292300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '48'
+LIMIT 4
+==== 15.03.2013/15:17:24/0.93871900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '49'
+LIMIT 4
+==== 15.03.2013/15:17:24/0.94256000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '51'
+LIMIT 4
+==== 15.03.2013/15:17:24/0.94607500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '50'
+LIMIT 4
+==== 15.03.2013/15:17:24/0.94972700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '52'
+LIMIT 4
+==== 15.03.2013/15:17:30/0.68991200 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 2
+LIMIT 1
+==== 15.03.2013/15:17:30/0.69614200 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:17:30/0.70148000 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 2
+AND `enabled` = 1
+==== 15.03.2013/15:17:30/0.70652200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '32'
+LIMIT 4
+==== 15.03.2013/15:17:30/0.71040000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '34'
+LIMIT 4
+==== 15.03.2013/15:17:30/0.71396300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '30'
+LIMIT 4
+==== 15.03.2013/15:17:30/0.71731400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '31'
+LIMIT 4
+==== 15.03.2013/15:17:30/0.72078300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '33'
+LIMIT 4
+==== 15.03.2013/15:17:30/0.72430500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '38'
+LIMIT 4
+==== 15.03.2013/15:17:30/0.72791700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '39'
+LIMIT 4
+==== 15.03.2013/15:17:30/0.73141800 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '27'
+LIMIT 4
+==== 15.03.2013/15:17:30/0.73479200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '40'
+LIMIT 4
+==== 15.03.2013/15:17:30/0.73869200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '41'
+LIMIT 4
+==== 15.03.2013/15:17:30/0.74284400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '42'
+LIMIT 4
+==== 15.03.2013/15:17:32/0.78108400 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 2
+LIMIT 1
+==== 15.03.2013/15:17:32/0.78663700 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:17:32/0.79198100 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 2
+AND `enabled` = 1
+==== 15.03.2013/15:17:32/0.79682600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '32'
+LIMIT 4
+==== 15.03.2013/15:17:32/0.80065600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '34'
+LIMIT 4
+==== 15.03.2013/15:17:32/0.80407700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '30'
+LIMIT 4
+==== 15.03.2013/15:17:32/0.80783400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '31'
+LIMIT 4
+==== 15.03.2013/15:17:32/0.81123200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '33'
+LIMIT 4
+==== 15.03.2013/15:17:32/0.81469500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '38'
+LIMIT 4
+==== 15.03.2013/15:17:32/0.81812100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '39'
+LIMIT 4
+==== 15.03.2013/15:17:32/0.82180100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '27'
+LIMIT 4
+==== 15.03.2013/15:17:32/0.82515700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '40'
+LIMIT 4
+==== 15.03.2013/15:17:32/0.82871400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '41'
+LIMIT 4
+==== 15.03.2013/15:17:32/0.83221500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '42'
+LIMIT 4
+==== 15.03.2013/15:17:34/0.77558100 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:17:37/0.59764700 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:17:44/0.97435500 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:17:45/0.84407200 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 2
+LIMIT 1
+==== 15.03.2013/15:17:45/0.84971600 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:17:45/0.85520500 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 2
+AND `enabled` = 1
+==== 15.03.2013/15:17:45/0.86027000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '32'
+LIMIT 4
+==== 15.03.2013/15:17:45/0.86395600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '34'
+LIMIT 4
+==== 15.03.2013/15:17:45/0.86759000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '30'
+LIMIT 4
+==== 15.03.2013/15:17:45/0.87112800 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '31'
+LIMIT 4
+==== 15.03.2013/15:17:45/0.87457600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '33'
+LIMIT 4
+==== 15.03.2013/15:17:45/0.87795100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '38'
+LIMIT 4
+==== 15.03.2013/15:17:45/0.88161200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '39'
+LIMIT 4
+==== 15.03.2013/15:17:45/0.88514700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '27'
+LIMIT 4
+==== 15.03.2013/15:17:45/0.88876500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '40'
+LIMIT 4
+==== 15.03.2013/15:17:45/0.89218000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '41'
+LIMIT 4
+==== 15.03.2013/15:17:45/0.89579700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '42'
+LIMIT 4
+==== 15.03.2013/15:17:47/0.56058600 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:18:02/0.24861200 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:18:04/0.69165900 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 2
+LIMIT 1
+==== 15.03.2013/15:18:04/0.69775100 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:18:04/0.70440600 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 2
+AND `enabled` = 1
+==== 15.03.2013/15:18:04/0.71038800 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '32'
+LIMIT 4
+==== 15.03.2013/15:18:04/0.71515200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '34'
+LIMIT 4
+==== 15.03.2013/15:18:04/0.72008000 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '30'
+LIMIT 4
+==== 15.03.2013/15:18:04/0.72384900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '31'
+LIMIT 4
+==== 15.03.2013/15:18:04/0.72801900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '33'
+LIMIT 4
+==== 15.03.2013/15:18:04/0.73176100 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '38'
+LIMIT 4
+==== 15.03.2013/15:18:04/0.73639700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '39'
+LIMIT 4
+==== 15.03.2013/15:18:04/0.74059500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '27'
+LIMIT 4
+==== 15.03.2013/15:18:04/0.74458700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '40'
+LIMIT 4
+==== 15.03.2013/15:18:04/0.74940200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '41'
+LIMIT 4
+==== 15.03.2013/15:18:04/0.75415500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '42'
+LIMIT 4
+==== 15.03.2013/15:18:05/0.37525900 SQL query ====
+SELECT *
+FROM (`town`)
+WHERE `id` = 2
+LIMIT 1
+==== 15.03.2013/15:18:05/0.38142200 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:18:05/0.38762600 SQL query ====
+SELECT building_places.*, building.name, building.url_alias, building.square, building.description, building.img
+FROM (building_places)
+JOIN building ON building_places.building_id=building.id
+WHERE `building`.`town_id` = 2
+AND `enabled` = 1
+==== 15.03.2013/15:18:05/0.39315900 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '32'
+LIMIT 4
+==== 15.03.2013/15:18:05/0.39728700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '34'
+LIMIT 4
+==== 15.03.2013/15:18:05/0.40120700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '30'
+LIMIT 4
+==== 15.03.2013/15:18:05/0.40590800 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '31'
+LIMIT 4
+==== 15.03.2013/15:18:05/0.40977600 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '33'
+LIMIT 4
+==== 15.03.2013/15:18:05/0.41350400 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '38'
+LIMIT 4
+==== 15.03.2013/15:18:05/0.41700700 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '39'
+LIMIT 4
+==== 15.03.2013/15:18:05/0.42089300 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '27'
+LIMIT 4
+==== 15.03.2013/15:18:05/0.42493500 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '40'
+LIMIT 4
+==== 15.03.2013/15:18:05/0.42876800 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '41'
+LIMIT 4
+==== 15.03.2013/15:18:05/0.43231200 SQL query ====
+SELECT img
+FROM (building_places_images)
+WHERE `building_place_id` = '42'
+LIMIT 4
+==== 15.03.2013/15:18:08/0.03348500 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10
+==== 15.03.2013/15:22:02/0.14395500 SQL query ====
+SELECT name, description, DATE_FORMAT(date_add,'%b %d') AS date_show, id
+FROM (news)
+WHERE `enabled` = 1
+ORDER BY date_add
+LIMIT 10

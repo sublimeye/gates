@@ -125,13 +125,13 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	/*left: 13px;*/
 	/*top: 13px;*/
 	float: left;
-	margin: 2px 0 0 13px;
+	margin: 10px 0 0 13px;
 
 	background: url(../img/logoZV.png)
 }
 .news {
 	width: 410px;
-	height: 60px;
+	height: 70px;
 	overflow: hidden;
 	/*position: absolute;
 	right: 13px;
@@ -1445,6 +1445,7 @@ path {
 	text-shadow: 0 0 10px #000, 1px 1px 15px #000;
 	font-size: 20px;
 	text-align: center;
+	cursor: default;
 }
 
 .pin-title-text_big {
@@ -1507,7 +1508,7 @@ path {
 
 .pin-megamarket {left: 870px; top: 480px;}
 .pin-dnipro-road {left: 915px; top: 615px;}
-.pin-cp {left: 1095px; top: 425px;}
+.pin-cp {left: 1105px; top: 423px;}
 .pin-capital-road {left: 1325px; top: 700px;}
 .pin-blue-lake {left: 1165px; top: 800px;}
 .pin-jukov-reservation {left: 1330px; top: 225px;}
@@ -1515,15 +1516,16 @@ path {
 .pin-river-konyk {left: 1410px; top: 325px;}
 .pin-domoshpere {left: 1025px; top: 335px;}
 
-.pin-bar-beacon { right: 0; top: 50%; }
+.pin-bar-beacon { right: 0; top: 45%; }
 .pin-odessa { left: 0; top: 16%;}
-.pin-odessa .pin-title-text { position: relative; left: 0; margin-left: 0; top: -37px; ;}
+.pin-odessa .pin-title-text { width: 260px; position: relative; left: 0; margin-left: 0; top: -40px; ;}
 
 .pin-bar-beacon .pin-title-text {
 	position: absolute;
-	right: 0;
-	text-align: right;
-	top: -37px;
+	left: -100px;
+	text-align: left;
+	top: -46px;
+	/*width: 200px;*/
 ;}
 
 .ui-pin_iconed {
@@ -1541,3 +1543,71 @@ path {
 
 .icon-available {background-position: -480px 5px;}
 .icon-available:hover {background-position: -480px -92px;}
+
+/* Road path highlight */
+.ui-road-highlight {
+	position: absolute;
+	display: none;
+	z-index: 50000;
+	background: url("/img/bg_town_road_highlight.png") no-repeat;
+}
+
+.ui-road-highlight-alpiyka {
+	width: 440px;
+	height: 351px;
+	background-position: 0 0;
+	left: 702px;
+	top: 405px;
+}
+
+.ui-road-highlight-konyk {
+	width: 118px;
+	height: 100px;
+	background-position: -415px 0;
+	left: 1117px;
+	top: 405px;
+}
+
+.ui-road-distance {
+	position: absolute;
+	display: none;
+}
+
+/* shades over towns on main page */
+.ui-shaded {
+	position: absolute;
+	z-index: 500031;
+}
+
+.ui-shaded a {
+		background: #000;
+	opacity: 0.5;
+
+}
+
+.ui-shaded-alpiyka {
+	left: 510px;
+	top: 710px;
+
+}
+
+.ui-shaded-alpiyka a {
+	display: block;
+	width: 280px;
+	height: 120px;
+	-webkit-transform: skew(-56deg) rotate(11deg);
+	transform: skew(-56deg) rotate(11deg);
+}
+
+
+.ui-shaded-konyk {
+	left: 1160px;
+	top: 365px;
+}
+
+.ui-shaded-konyk a {
+	width: 230px;
+	height: 70px;
+	-webkit-transform: skew(-65deg) rotate(12deg);
+	transform: skew(-65deg) rotate(12deg);
+}

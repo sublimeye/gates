@@ -857,6 +857,7 @@ $(document).ready(function () {
 
 	clouds_obj.Init();
 	mapResizer.init();
+	makeVisible.init();
 
 	var anchors_section_handler = {
 		'city': main_menu_handler,
@@ -947,12 +948,13 @@ var mapResizer = {
 	 */
 	fitToWindow: function() {
 		var W = this.$win.width();
+		/* subtracting footer height: for correct visual area calculations */
 		var H = this.$win.height() - this.$footer.outerHeight();
-
-		this.$outerWrapper.height(H);
-
 		var transform = 'top ';
 		var scale;
+
+		/* dynamic outer-wrapper height */
+		this.$outerWrapper.height(H);
 
 		/* get scale index */
 		scale = this.getScale(W, H);
@@ -1091,4 +1093,31 @@ var mapResizer = {
 		this.setTransform('top center');
 		return 1;
 	}
+};
+
+/**
+ *
+ */
+var makeVisible = {
+
+	init: function() {
+
+		$('[data-make-visible]').each(function() {
+			var makeVisibleSelector = $(this).attr('data-make-visible');
+			var makeVisibleElements = $(makeVisibleSelector);
+
+				$(this).hover(
+				/* mouseover */
+				function() {
+					makeVisibleElements.stop(true, true).fadeIn('fast');
+				},
+				/* mouseout */
+				function() {
+					makeVisibleElements.stop(true, true).fadeOut('fast');
+				}
+				);
+		});
+
+	}
+
 };
