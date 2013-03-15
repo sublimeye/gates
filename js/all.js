@@ -227,11 +227,11 @@ $(document).ready(function () {
 
 	/* Обработчик перехода по ссылке /towns/horse */
 
-	$('a.cityKonik').click(function () {
+	$('.cityKonik').click(function () {
 		clouds_obj.stop();
 
-		canvas_width = 1488;
-		canvas_height = 927;
+		canvas_width = 2000;
+		canvas_height = 890;
 
 		$('div.allLabels').prepend($('<canvas style="z-index:50002;position:absolute;left:0px;top:0px;" id="cloud"></canvas>'));
 
@@ -251,13 +251,13 @@ $(document).ready(function () {
 		var x = 0;
 		var y = 0;
 
-		img.src = '/img/mainBg.jpg';
+		img.src = '/img/main_bg.jpg';
 
 		var render_timer = setInterval(function () {
-			if (scale < 1.1) {
-				scale = scale + 0.01;
-				x = x - (3 * scale);
-				y = y - (8 * scale);
+			if (scale < 1.2) {
+				scale = scale + 0.02;
+				x = x - (85 * scale);
+				y = y - (20 * scale);
 
 				context.scale(scale, scale);
 				context.drawImage(img, x, y);
@@ -266,18 +266,18 @@ $(document).ready(function () {
 				clearInterval(render_timer);
 				location.href = $(link).attr('href');
 			}
-		}, 1000 / 33);
+		}, 30 );
 
 		return false;
 	});
 
 	/* Обработчик перехода по ссылке /towns/alpiyka */
 
-	$('a.cityAlpiyka').click(function () {
+	$('.cityAlpiyka').click(function () {
 		clouds_obj.stop();
 
-		canvas_width = 1488;
-		canvas_height = 927;
+		canvas_width = 2000;
+		canvas_height = 890;
 
 		$('div.allLabels').prepend($('<canvas style="z-index:50002;position:absolute;left:0px;top:0px;" id="cloud"></canvas>'));
 
@@ -297,14 +297,14 @@ $(document).ready(function () {
 		var x = 0;
 		var y = 0;
 
-		img.src = '/img/mainBg.jpg';
+		img.src = '/img/main_bg.jpg';
 
 		var render_timer = setInterval(function () {
-			if (scale < 1.1) {
-				scale = scale + 0.01;
+			if (scale < 1.3) {
+				scale = scale + 0.02;
 
-				x = x - (80 * scale);
-				y = y - (15 * scale);
+				x = x - (35 * scale);
+				y = y - (43 * scale);
 
 				context.scale(scale, scale);
 				context.drawImage(img, x, y);
@@ -313,7 +313,7 @@ $(document).ready(function () {
 				clearInterval(render_timer);
 				location.href = $(link).attr('href');
 			}
-		}, 1000 / 33);
+		}, 30);
 
 		return false;
 	});
@@ -896,6 +896,8 @@ $(document).ready(function () {
 var mapResizer = {
 	$win: null,
 	$wrapper: null,
+	$footer: null,
+	$outerWrapper: null,
 	img: null,
 	vis: null,
 	crop: null,
@@ -909,7 +911,10 @@ var mapResizer = {
 	},
 
 	events: function() {
-		$(window).bind('resize', this.fitToWindow.bind(this) );
+		var that = this;
+		$(window).bind('resize', function() {
+			that.fitToWindow();
+		});
 	},
 
 	/**
@@ -922,6 +927,9 @@ var mapResizer = {
 
 		this.$win = $(window);
 		this.$wrapper = $('.wrapper');
+
+		this.$footer = $('.footer');
+		this.$outerWrapper = $('.outerWrapper');
 
 		this.getCoordinates(workarea, data);
 		this.getVisualAreaCropPercentage();
@@ -939,18 +947,21 @@ var mapResizer = {
 	 */
 	fitToWindow: function() {
 		var W = this.$win.width();
-		var H = this.$win.height();
+		var H = this.$win.height() - this.$footer.outerHeight();
+
+		this.$outerWrapper.height(H);
+
+		var transform = 'top ';
 		var scale;
 
-		this.setTransform('top left');
-
-		/* Window size is smaller than the active zone width or height => zoom out */
-		if ( !((W < this.vis.w || H < this.vis.h) || ( W > this.img.w)) ) {
-			this.setTransform('top center');
-		}
-
+		/* get scale index */
 		scale = this.getScale(W, H);
+
+		/* for crop set transform-origin to "top center", for zooming "top left" */
+		transform += (scale === 1) ? 'center' : 'left';
+
 		this.updateOffset(W, H, scale);
+		this.setTransform(transform);
 		this.setScale( scale );
 	},
 
@@ -962,6 +973,7 @@ var mapResizer = {
 		if ( scale !== this.scale ) {
 			this.$wrapper.css({
 				'-webkit-transform': 'scale( ' + scale + ' )',
+				'-ms-transform': 'scale( ' + scale + ' )',
 				'transform': 'scale( ' + scale + ' )'
 			});
 			this.scale = scale;
@@ -976,6 +988,7 @@ var mapResizer = {
 		if (this.origin !== transform) {
 			this.$wrapper.css({
 				'-webkit-transform-origin': transform,
+				'-ms-transform-origin': transform,
 				'transform-origin': transform
 			});
 			this.origin = transform;
@@ -1055,25 +1068,27 @@ var mapResizer = {
 		var scaleWidthVis = W / this.vis.w;
 		var scaleHeightVis = H / this.vis.h;
 
-		var visHeightDominatesImgWidth = scaleWidthImg < scaleHeightVis;
-		var imgWidthDominatesImgHeight = scaleWidthImg >= scaleHeightImg;
+		var isVisHeightDominatesImgWidth = scaleWidthImg < scaleHeightVis;
+		var isImgWidthDominatesImgHeight = scaleWidthImg >= scaleHeightImg;
 
 
 		/* zoom out mode */
 		if ( W < this.vis.w || H < this.vis.h ) {
 			return (scaleWidthVis <= scaleHeightVis) ? scaleWidthVis : scaleHeightVis;
 
-		} else if ( W > this.img.w ) {
+		} else if ( W > this.img.w || H > this.img.h ) {
+
 
 			/* zoom in mode */
-			if ( imgWidthDominatesImgHeight && visHeightDominatesImgWidth) { return scaleWidthImg; }
-			if ( imgWidthDominatesImgHeight && !visHeightDominatesImgWidth) { return scaleHeightVis; }
+			if ( isImgWidthDominatesImgHeight && isVisHeightDominatesImgWidth) { return scaleWidthImg; }
+			if ( isImgWidthDominatesImgHeight && !isVisHeightDominatesImgWidth) { return scaleHeightVis; }
 
-			if ( !imgWidthDominatesImgHeight && visHeightDominatesImgWidth) { return scaleHeightImg; }
-			if ( !imgWidthDominatesImgHeight && !visHeightDominatesImgWidth) { return scaleWidthVis; }
+			if ( !isImgWidthDominatesImgHeight && isVisHeightDominatesImgWidth) { return scaleHeightImg; }
+			if ( !isImgWidthDominatesImgHeight && !isVisHeightDominatesImgWidth) { return scaleWidthVis; }
 		}
 
 		/* crop */
+		this.setTransform('top center');
 		return 1;
 	}
 };
