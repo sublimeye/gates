@@ -5,12 +5,13 @@
         <a href="<?php echo $this->get('base_url')?>" class="logo"></a>
 				<div class="footer-right-holder">	
 					<div class="phone-num">
-						
 					</div>
+
 					<?if($this->uri->segment(2) == "alpiyka" || $this->uri->segment(2) == "horse"){?>
 					<div class="link-holder">
 						<a href="/towns/<?= $this->uri->segment(2) == "alpiyka" ? "horse" : "alpiyka" ?>/city" class="link-to-another">смотреть другой городок</a>
 					</div>
+
 					<?}else{?>
 					<div class="news">
 	            <div class="newsContainer">
@@ -25,6 +26,7 @@
 	            <div class="prew" style="display:none" ></div>
 	        </div>
 					<?}?>
+
 				</div>
 				
     </div>

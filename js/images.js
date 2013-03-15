@@ -43,7 +43,7 @@ Images = function () {
 			shape_out_handler();
 		});
 
-		$('div.pin').live('click', function (e) {
+		$('.js-pin').live('click', function (e) {
 			shape_out_handler(1);
 
 			var win = $('div.houseDescription');
@@ -64,9 +64,9 @@ Images = function () {
 		var shape = r.path(path);
 		var pin_point = findPoint(points);
 
-		var construction_pin = '<div class="pin construction" array_index="' + shapes.length + '" style="top: ' + pin_point[1] + 'px; left: ' + pin_point[0] + 'px"></div>';
-		var soldFurnished = '<div class="pin soldFurnished" array_index="' + shapes.length + '"  style="top: ' + pin_point[1] + 'px; left: ' + pin_point[0] + 'px"></div>';
-		var sold = '<div class="pin sold" array_index="' + shapes.length + '"  style="top: ' + pin_point[1] + 'px; left: ' + pin_point[0] + 'px"></div>';
+		var construction_pin = '<div class="js-pin ui-pin ui-pin_iconed icon-under-construction" array_index="' + shapes.length + '" style="top: ' + pin_point[1] + 'px; left: ' + pin_point[0] + 'px"></div>';
+		var soldFurnished = '<div class="js-pin ui-pin ui-pin_iconed icon-available-furnished" array_index="' + shapes.length + '"  style="top: ' + pin_point[1] + 'px; left: ' + pin_point[0] + 'px"></div>';
+		var sold = '<div class="js-pin ui-pin ui-pin_iconed icon-available" array_index="' + shapes.length + '"  style="top: ' + pin_point[1] + 'px; left: ' + pin_point[0] + 'px"></div>';
 
 		shape.attr(
 			{
@@ -78,7 +78,6 @@ Images = function () {
 
 		if (attr.state == '0') {
 			$('#map').append(construction_pin);
-
 			if (attr.state == '0') {
 				shape.attr({
 					'stroke-width': 0,
@@ -98,13 +97,15 @@ Images = function () {
 
 		shape.array_index = shapes.length;
 
-		var pin = $('div.pin[array_index="' + shape.array_index + '"]');
+		var pin = $('.js-pin[array_index="' + shape.array_index + '"]');
 
 		$(pin).hover(pin_hover, pin_out_hover);
 
 		shape.click(function(e) {
-			shape_over_handler(e);
+			shape_out_handler(1);
+			shape_over_handler(e, 0, 0, shape.array_index)
 		});
+
 		shape.mouseover(shape_hover);
 		shape.mouseout(shape_out_hover);
 
@@ -171,7 +172,9 @@ Images = function () {
 	}
 
 	var shape_over_handler = function (e, x, y, array_index) {
+
 		var index = (array_index == undefined) ? this.array_index : array_index;
+
 		var win = $('div.houseDescription');
 		var bilding_data = shapes[index];
 

@@ -3,9 +3,9 @@
 <?php $this->load->view('header')?>
 
 <div class="outerWrapper">
-	<div class="wrapper">
-			<div class="workArea main js-workarea" data-active-zone="92,253,924,750">
 					<div class="fixLabels">
+
+<!--
 							<div class="label bigF obuh1">
 									Конча-Заспа
 								 <div class="line"></div>
@@ -31,15 +31,81 @@
 								 <div class="line"></div>
 								 <div class="kms">900 м</div>
 							</div>
+-->
+
+
 					</div>
+
+	<div class="wrapper">
+			<div class="workArea main js-workarea" data-active-zone="500,140,1464,868">
 
 					<div class="allLabels">
 
+						<div class="ui-pin pin-kyiv ui-pin_visible">
+							<span class="pin-icon pin-icon_city"></span>
+							<div class="pin-title"><div class="pin-title-text pin-title-text_big">Киев</div></div>
+						</div>
+
+						<div class="ui-pin ui-pin_visible pin-konyk">
+							<span class="pin-icon pin-icon_town"><a href="<?php echo $this->get('base_url').'towns/horse/city'?>" class="ui-pin-link cityKonik"></a></span>
+							<div class="pin-title"><div class="pin-title-text pin-title-text_big">Конык</div></div>
+						</div>
+
+						<div class="ui-pin ui-pin_visible pin-alpiyka">
+							<span class="pin-icon pin-icon_town"><a href="<?php echo $this->get('base_url').'towns/alpiyka/city'?>" class="ui-pin-link cityAlpiyka"></a></span>
+							<div class="pin-title"><div class="pin-title-text pin-title-text_big">Альпийка</div></div>
+						</div>
+
+						<div class="ui-pin pin-dynamo">
+							<span class="pin-icon pin-icon_football"></span>
+							<div class="pin-title"><div class="pin-title-text pin-title-text_double">Футбольные поля <br/>&laquo;Динамо&raquo;</div></div>
+						</div>
+
+						<div class="ui-pin pin-megamarket">
+							<span class="pin-icon pin-icon_store"></span>
+							<div class="pin-title"><div class="pin-title-text">Мегамаркет</div></div>
+						</div>
+
+						<div class="ui-pin pin-dnipro-road">
+							<span class="pin-icon pin-icon_road"></span>
+							<div class="pin-title"><div class="pin-title-text">Днепровское шоссе</div></div>
+						</div>
+
+						<div class="ui-pin pin-cp">
+							<span class="pin-icon pin-icon_cp"></span>
+							<div class="pin-title"><div class="pin-title-text">КП</div></div>
+						</div>
+
+						<div class="ui-pin pin-capital-road">
+							<span class="pin-icon pin-icon_road"></span>
+							<div class="pin-title"><div class="pin-title-text">Столичное шоссе</div></div>
+						</div>
+
+						<div class="ui-pin pin-blue-lake">
+							<span class="pin-icon pin-icon_water"></span>
+							<div class="pin-title"><div class="pin-title-text">Голубое озеро</div></div>
+						</div>
+
+						<div class="ui-pin pin-jukov-reservation">
+							<span class="pin-icon pin-icon_reservation"></span>
+							<div class="pin-title"><div class="pin-title-text pin-title-text_double">Заповедник <br/>&laquo;Жуков остров&raquo;</div></div>
+						</div>
+
+						<div class="ui-pin pin-river-konyk">
+							<span class="pin-icon pin-icon_water"></span>
+							<div class="pin-title"><div class="pin-title-text">р. Конык</div></div>
+						</div>
+
+						<div class="ui-pin pin-domoshpere">
+							<span class="pin-icon pin-icon_shopping"></span>
+							<div class="pin-title"><div class="pin-title-text">Домосфера</div></div>
+						</div>
+
+<!--
 							<a href="<?php echo $this->get('base_url').'towns/horse/city'?>" class="label bigF cityKonik">
 								 <img src="/img/logoKonik.png" width="79" height="58" alt="" />
 								 <div class="tail"></div>
 							</a>
-
 
 							<a href="<?php echo $this->get('base_url').'towns/alpiyka/city'?>" class="label bigF cityAlpiyka">
 								 <img src="/img/logoAlpiyka.png" width="88" height="51" alt="" />
@@ -70,10 +136,34 @@
 								 Голубое озеро
 								 <div class="tail"></div>
 							</div>
+-->
+
 					</div>
 			</div>
 
-	</div>
-</div>
+	</div><!-- wrapper -->
+
+<!--horizontal-->
+
+					<div class="js-fixed-labels">
+						<div class="ui-pin pin-bar-beacon">
+							<span class="pin-icon pin-icon_horizontal pin-icon_food_horizontal"></span>
+							<div class="pin-title"><div class="pin-title-text">Ресторан &laquo;Маячек&raquo;</div></div>
+						</div>
+
+						<div class="ui-pin pin-odessa ui-pin_visible">
+							<span class="pin-icon pin-icon_horizontal pin-icon_city_horizontal"></span>
+							<div class="pin-title"><div class="pin-title-text pin-title-text_big">Одесса</div></div>
+						</div>
+					</div>
+
+</div><!-- outer wrapper -->
 
 <?php $this->load->view('footer')?>
+<!--
+<script>
+$(function(){
+	$('aui-pin').draggable();
+});
+</script>
+-->

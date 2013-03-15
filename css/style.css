@@ -86,11 +86,9 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 }
 
 .wrapper {
-	width: 1488px;
-	height: 927px;
+	/*width: 100%;*/
+	/*height: 100%;*/
 
-	/*width: 1902px;*/
-	/*height: 950px;*/
 	margin: 0 auto;
 	position: relative;
 	text-align: center;
@@ -100,37 +98,40 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 /* ===================
     ALL:
    =================== */
-
 /* FOOTER */
 .footer {
-	position: fixed;
-	bottom: 0;
-	left: 0;
+	/*position: fixed;*/
+	/*bottom: 0;*/
+	/*left: 0;*/
 	height: 70px;
 	width: 100%;
 	background: #ffffff;
 	z-index: 51000;
 }
 .footContainer {
-	width: 1200px;
-	height: 70px;
+	max-width: 1280px;
+	/*width: 1200px;*/
+	/*height: 70px;*/
 	margin: 0 auto;
 	text-align: right;
 	position: relative;
-	padding-top: 11px;
+	/*padding-top: 11px;*/
 }
 .logo {
 	display: block;
 	width: 174px;
 	height: 39px;
-	position: absolute;
-	left: 13px;
-	top: 13px;
+	/*position: absolute;*/
+	/*left: 13px;*/
+	/*top: 13px;*/
+	float: left;
+	margin: 2px 0 0 13px;
+
 	background: url(../img/logoZV.png)
 }
 .news {
 	width: 410px;
-	height: 70px;
+	height: 60px;
 	overflow: hidden;
 	/*position: absolute;
 	right: 13px;
@@ -142,7 +143,7 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	-webkit-user-select: none;
 	user-select: none;
 	border-left: 1px solid #e8e8e8;
-	padding-top: 15px;
+	padding-top: 10px;
 	padding-left: 20px;
 }
 .newsContainer {
@@ -207,25 +208,74 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
 }
 
+@media screen and (max-width: 920px) {
+	.footer {
+		height: 190px;
+	}
+	.footContainer {
+		text-align: center;
+		padding-top: 10px;
+	}
+
+	.footContainer > * {
+		display: block;
+		float: none;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.footContainer .footer-right-holder {
+		float: none;
+	}
+
+	.footContainer .phone-num {
+		float: none;
+		border: none;
+		width: auto;
+		margin: 10px auto 0;
+	}
+
+	.footContainer .news {
+		float: none;
+		border: none;
+		margin: 0 auto;
+	}
+
+	.footContainer .link-holder {
+		float: none;
+		text-align: center;
+		border: none;
+	}
+	.footContainer .link-holder a {
+		margin: 0 auto;
+	}
+}
+
 /* CONTENT */
 .workArea {
-	width: 1488px;
-	height: 927px;
+	/*width: 1488px;*/
+	/*height: 927px;*/
+	width: 100%;
+	height: 100%;
 	position: relative;
 	/*top: 50%;*/
 	top: 0;
 	/*left: 50%;*/
 }
 .main {
-	background: url(../img/mainBg.jpg) no-repeat;
+	background: url(../img/main_bg.jpg) no-repeat;
+	width: 2000px;
+	height: 890px;
 }
 .alpiyka {
 	background: url(../img/kon_bg.jpg) no-repeat;
+	width: 1488px;
+	height: 927px;
 }
 .konik {
-	background: url(../img/alpiyka_big.jpg) no-repeat;
-	/*height: 950px;*/
-	/*margin-top: -475px;*/
+	background: url(../img/alp_bg.jpg) no-repeat;
+	width: 1488px;
+	height: 927px;
 }
 .map {
 	position: absolute;
@@ -299,7 +349,9 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	left: 0;
 	width: 100%;
 	height: 100%;
+	/*z-index: 1000;*/
 }
+
 .fixLabels .label {
 	z-index: 10000;
 }
@@ -609,6 +661,7 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	padding-top: 3px;
 }
 
+/*
 .cityKonik {
 	display: block;
 	position: absolute;
@@ -624,6 +677,8 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	opacity: 0.9;
 	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
 }
+*/
+/*
 
 .cityAlpiyka {
 	display: block;
@@ -640,6 +695,7 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	opacity: 0.9;
 	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
 }
+*/
 
 .windRose {
 	width: 120px;
@@ -1181,6 +1237,7 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 .sold {
 	background: url(../img/pin1.png) no-repeat;
 }
+
 .soldFurnished {
 	background: url(../img/pin2.png) no-repeat;
 }
@@ -1210,10 +1267,10 @@ iframe {
 #map_canvas {
 	width: 100%;
 	height: 100%;
-	position: "absolute";
+	position: absolute;
 	top: 0px;
 	left: 0px;
-	overflow: "hidden";
+	overflow: hidden;
 }
 
 /*
@@ -1227,8 +1284,6 @@ iframe {
 	padding: 0;
 	left: auto;
 	height: 400px;
-*
-/
 	}
 
 /*
@@ -1297,10 +1352,12 @@ iframe {
 }
 
 .footer-right-holder {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	height: 70px;
+	float: right;
+
+	/*position: absolute;*/
+	/*top: 0px;*/
+	/*right: 0px;*/
+	/*height: 70px;*/
 }
 .phone-num {
 	width: 305px;
@@ -1326,6 +1383,7 @@ iframe {
 	white-space: nowrap;
 	margin-top: 20px;
 }
+
 .link-to-another:hover {
 	opacity: 0.8;
 }
@@ -1346,3 +1404,140 @@ iframe {
 .houseDescription .smallPhoto:hover {
 	/*box-shadow: 0 0 5px 1px rgba(0,0,0,.5);*/
 }
+
+/* PINs */
+.ui-pin {
+	position: absolute;
+	font-family: HelveticaNeueCyr, Tahoma, Arial, sans-serif;
+	z-index: 50001;
+}
+
+path {
+	cursor: pointer;
+}
+
+.ui-pin-link {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.pin-icon {
+	display: block;
+	background: url("/img/ui_pins.png") no-repeat;
+	width: 50px;
+	height: 70px;
+}
+
+.pin-icon_horizontal {
+	width: 64px;
+	height: 46px;
+}
+
+.pin-title-text {
+	position: absolute;
+	width: 300px;
+	left: -125px;
+	/*margin-left: 43px;*/
+	top: -90px;
+	white-space: nowrap;
+	color: #fff;
+	text-shadow: 0 0 10px #000, 1px 1px 15px #000;
+	font-size: 20px;
+	text-align: center;
+}
+
+.pin-title-text_big {
+	top: -100px;
+	font-size: 32px;
+}
+
+.pin-title-text_double {
+	top: -115px;
+}
+
+.pin-title { position: relative; display: none; }
+.ui-pin_visible .pin-title { display: block; }
+.pin-icon:hover + .pin-title { display: block; }
+
+/* Pins */
+.pin-icon_city {background-position: -60px 5px;}
+.pin-icon_city:hover {background-position: -60px -92px;}
+.pin-kyiv .pin-icon_city:hover {background-position: -60px 5px;}
+
+.pin-icon_town {background-position: -180px 5px;}
+.pin-icon_town:hover {background-position: -180px -92px;}
+.pin-konyk .pin-icon_town:hover {background-position: -180px 5px;}
+.pin-alpiyka .pin-icon_town:hover {background-position: -180px 5px;}
+
+.pin-icon_football {background-position: -120px 5px;}
+.pin-icon_football:hover {background-position: -120px -92px;}
+
+.pin-icon_store {background-position: -300px 5px;}
+.pin-icon_store:hover {background-position: -300px -92px;}
+
+.pin-icon_road {background-position: -420px 5px;}
+.pin-icon_road:hover {background-position: -420px -92px;}
+
+.pin-icon_cp {background-position: -720px 5px;}
+.pin-icon_cp:hover {background-position: -720px -92px;}
+
+.pin-icon_reservation {background-position: -660px 5px;}
+.pin-icon_reservation:hover {background-position: -660px -92px;}
+
+.pin-icon_shopping {background-position: 0 5px;}
+.pin-icon_shopping:hover {background-position: 0 -92px;}
+
+.pin-icon_water {background-position: -600px 5px;}
+.pin-icon_water:hover {background-position: -600px -92px;}
+
+/* horizontal */
+.pin-icon_city_horizontal {background-position: -780px 4px;}
+
+/* horizontal */
+.pin-icon_food_horizontal {background-position: -844px 4px;}
+.pin-icon_food_horizontal:hover {background-position: -844px -42px;}
+
+
+/* pin places */
+.pin-kyiv {left: 950px; top: 188px;}
+.pin-konyk {left: 1252px; top: 312px;}
+.pin-alpiyka {left: 660px; top: 665px;}
+.pin-dynamo {left: 1275px; top: 540px;}
+
+.pin-megamarket {left: 870px; top: 480px;}
+.pin-dnipro-road {left: 915px; top: 615px;}
+.pin-cp {left: 1095px; top: 425px;}
+.pin-capital-road {left: 1325px; top: 700px;}
+.pin-blue-lake {left: 1165px; top: 800px;}
+.pin-jukov-reservation {left: 1330px; top: 225px;}
+
+.pin-river-konyk {left: 1410px; top: 325px;}
+.pin-domoshpere {left: 1025px; top: 335px;}
+
+.pin-bar-beacon { right: 0; top: 50%; }
+.pin-odessa { left: 0; top: 16%;}
+.pin-odessa .pin-title-text { position: relative; left: 0; margin-left: 0; top: -37px; ;}
+
+.pin-bar-beacon .pin-title-text {
+	position: absolute;
+	right: 0;
+	text-align: right;
+	top: -37px;
+;}
+
+.ui-pin_iconed {
+	width: 45px;
+	height: 65px;
+	cursor: pointer;
+	background: url("/img/ui_pins.png");
+}
+
+.icon-under-construction {background-position: -360px 5px;}
+.icon-under-construction:hover {background-position: -360px -92px;}
+
+.icon-available-furnished {background-position: -540px 5px;}
+.icon-available-furnished:hover {background-position: -540px -92px;}
+
+.icon-available {background-position: -480px 5px;}
+.icon-available:hover {background-position: -480px -92px;}

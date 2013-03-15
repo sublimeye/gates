@@ -40,10 +40,3 @@
 $route['default_controller'] = "main";
 
 $route['backend'] = "backend/authorization/index";
-
-
-
-
-
-
-
