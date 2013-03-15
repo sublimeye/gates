@@ -1468,8 +1468,8 @@ path {
 
 .pin-icon_town {background-position: -180px 5px;}
 .pin-icon_town:hover {background-position: -180px -92px;}
-.pin-konyk .pin-icon_town:hover {background-position: -180px 5px;}
-.pin-alpiyka .pin-icon_town:hover {background-position: -180px 5px;}
+/*.pin-konyk .pin-icon_town:hover {background-position: -180px 5px;}*/
+/*.pin-alpiyka .pin-icon_town:hover {background-position: -180px 5px;}*/
 
 .pin-icon_football {background-position: -120px 5px;}
 .pin-icon_football:hover {background-position: -120px -92px;}
@@ -1576,19 +1576,20 @@ path {
 /* shades over towns on main page */
 .ui-shaded {
 	position: absolute;
-	z-index: 500031;
+	z-index: 50000;
 }
 
 .ui-shaded a {
-		background: #000;
-	opacity: 0.5;
-
+	/*background: #000;*/
+	/*opacity: 0.5;*/
 }
 
 .ui-shaded-alpiyka {
 	left: 510px;
 	top: 710px;
-
+	background: url("/img/bg_town_alpiyka_shadowed.jpg");
+	width: 327px;
+	height: 154px;
 }
 
 .ui-shaded-alpiyka a {
@@ -1601,13 +1602,20 @@ path {
 
 
 .ui-shaded-konyk {
-	left: 1160px;
-	top: 365px;
+	left: 1165px;
+	top: 335px;
+	background: url("/img/bg_town_konyk_shadowed.jpg");
+	width: 254px;
+	height: 116px;
 }
 
 .ui-shaded-konyk a {
+	position: absolute;
+	top: 20px;
+	left: -10px;
 	width: 230px;
 	height: 70px;
+	/*display: none;*/
 	-webkit-transform: skew(-65deg) rotate(12deg);
 	transform: skew(-65deg) rotate(12deg);
 }

@@ -13,6 +13,19 @@
 			<div class="workArea main js-workarea" data-active-zone="500,140,1464,868">
 
 					<div class="allLabels">
+<!-- shadows above towns -->
+						<div class="ui-shaded ui-shaded-alpiyka">
+							<a href="<?php echo $this->get('base_url').'towns/alpiyka/city'?>" class="ui-pin-link cityAlpiyka"></a>
+						</div>
+
+						<div class="ui-shaded ui-shaded-konyk">
+							<a href="<?php echo $this->get('base_url').'towns/horse/city'?>" class="ui-pin-link cityKonik"></a>
+						</div>
+<!-- // shadows above towns -->
+
+
+
+
 						<div class="ui-road-highlight ui-road-highlight-alpiyka js-road-to-alpiyka">
 							<div class="ui-road-distance">7 км</div>
 						</div>
@@ -36,15 +49,6 @@
 							<div class="pin-title"><div class="pin-title-text pin-title-text_big">Альпийка</div></div>
 						</div>
 
-<!-- shadows above towns -->
-						<div class="ui-shaded ui-shaded-alpiyka">
-							<a href="<?php echo $this->get('base_url').'towns/alpiyka/city'?>" class="ui-pin-link cityAlpiyka"></a>
-						</div>
-
-						<div class="ui-shaded ui-shaded-konyk">
-							<a href="<?php echo $this->get('base_url').'towns/horse/city'?>" class="ui-pin-link cityKonik"></a>
-						</div>
-<!-- // shadows above towns -->
 
 
 						<div class="ui-pin pin-dynamo">
@@ -89,7 +93,7 @@
 
 						<div class="ui-pin pin-domoshpere">
 							<span class="pin-icon pin-icon_shopping"></span>
-							<div class="pin-title"><div class="pin-title-text">Домосфера</div></div>
+							<div class="pin-title"><div class="pin-title-text">ТЦ &laquo;Домосфера&raquo;</div></div>
 						</div>
 
 <!--
@@ -121,6 +125,6 @@
 
 <script>
 $(function(){
-	$('.ui-shaded').draggable();
+	$('.aui-shaded').draggable();
 });
 </script>
