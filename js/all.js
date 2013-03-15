@@ -899,6 +899,7 @@ var mapResizer = {
 	$wrapper: null,
 	$footer: null,
 	$outerWrapper: null,
+	$zoomable: null,
 	img: null,
 	vis: null,
 	crop: null,
@@ -928,6 +929,7 @@ var mapResizer = {
 
 		this.$win = $(window);
 		this.$wrapper = $('.wrapper');
+		this.$zoomable = $('.js-zoomable');
 
 		this.$footer = $('.footer');
 		this.$outerWrapper = $('.outerWrapper');
@@ -973,11 +975,12 @@ var mapResizer = {
 	 */
 	setScale: function(scale) {
 		if ( scale !== this.scale ) {
-			this.$wrapper.css({
+			this.$wrapper.add(this.$zoomable).css({
 				'-webkit-transform': 'scale( ' + scale + ' )',
 				'-ms-transform': 'scale( ' + scale + ' )',
 				'transform': 'scale( ' + scale + ' )'
 			});
+
 			this.scale = scale;
 		}
 	},

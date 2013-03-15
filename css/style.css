@@ -1517,7 +1517,7 @@ path {
 .pin-domoshpere {left: 1025px; top: 335px;}
 
 .pin-bar-beacon { right: 0; top: 45%; }
-.pin-odessa { left: 0; top: 16%;}
+.pin-odessa { left: 0; top: 30%;}
 .pin-odessa .pin-title-text { width: 260px; position: relative; left: 0; margin-left: 0; top: -40px; ;}
 
 .pin-bar-beacon .pin-title-text {
@@ -1585,37 +1585,67 @@ path {
 }
 
 .ui-shaded-alpiyka {
-	left: 510px;
-	top: 710px;
-	background: url("/img/bg_town_alpiyka_shadowed.jpg");
+	left: 488px;
+	top: 697px;
 	width: 327px;
 	height: 154px;
+	background: none;
 }
 
-.ui-shaded-alpiyka a {
+.ui-shaded-link-alpiyka {
+	position: absolute;
+	z-index: 50001;
 	display: block;
+	left: 488px;
+	top: 697px;
 	width: 280px;
 	height: 120px;
 	-webkit-transform: skew(-56deg) rotate(11deg);
 	transform: skew(-56deg) rotate(11deg);
 }
 
+.ui-shaded-link-alpiyka:hover + .ui-shaded-alpiyka {
+	background: url("/img/bg_town_alpiyka_shadowed.jpg");
+}
+
 
 .ui-shaded-konyk {
 	left: 1165px;
 	top: 335px;
-	background: url("/img/bg_town_konyk_shadowed.jpg");
+	background: none;
 	width: 254px;
 	height: 116px;
 }
 
-.ui-shaded-konyk a {
+.ui-shaded-link-konyk {
 	position: absolute;
-	top: 20px;
-	left: -10px;
+	z-index: 50001;
+	left: 1155px;
+	top: 360px;
 	width: 230px;
 	height: 70px;
 	/*display: none;*/
 	-webkit-transform: skew(-65deg) rotate(12deg);
 	transform: skew(-65deg) rotate(12deg);
+}
+
+.ui-shaded-link-konyk:hover + .ui-shaded-konyk {
+	background: url("/img/bg_town_konyk_shadowed.jpg");
+}
+
+.js-zoomable {
+	-webkit-transform-origin: center left;
+	-ms-transform-origin: top left;
+	transform-origin: top left;
+}
+
+.ui-windrose {
+	position: absolute;
+	z-index: 500001;
+	left: 1%;
+	top: 1%;
+	width: 118px;
+	height: 119px;;
+
+	background: url("/img/ui_windrose.png");
 }

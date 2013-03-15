@@ -3,6 +3,7 @@
 <?php $this->load->view('header')?>
 
 <div class="outerWrapper">
+					<div class="ui-windrose ui-windrose-main js-zoomable"></div>
 					<div class="fixLabels">
 <!--
 							<div class="label bigF obuh1"> Конча-Заспа <div class="line"></div> </div> <div class="label bigF obuh2"> Обухов <div class="line"></div> </div> <div class="label bigF odessa"> Одесса <div class="line"></div> </div> <div class="label bigF cKiev"> Центр Киева <div class="line"></div> <div class="kms">7 км</div> </div> <div class="label bigF cDomosfera"> Домосфера <div class="line"></div> <div class="kms">900 м</div> </div>
@@ -14,13 +15,11 @@
 
 					<div class="allLabels">
 <!-- shadows above towns -->
-						<div class="ui-shaded ui-shaded-alpiyka">
-							<a href="<?php echo $this->get('base_url').'towns/alpiyka/city'?>" class="ui-pin-link cityAlpiyka"></a>
-						</div>
+						<a href="<?php echo $this->get('base_url').'towns/alpiyka/city'?>" class="ui-shaded-link-alpiyka cityAlpiyka" data-make-visible=".js-road-to-alpiyka"></a>
+						<div class="ui-shaded ui-shaded-alpiyka"></div>
 
-						<div class="ui-shaded ui-shaded-konyk">
-							<a href="<?php echo $this->get('base_url').'towns/horse/city'?>" class="ui-pin-link cityKonik"></a>
-						</div>
+						<a href="<?php echo $this->get('base_url').'towns/horse/city'?>" class="ui-shaded-link-konyk cityKonik" data-make-visible=".js-road-to-konyk"></a>
+						<div class="ui-shaded ui-shaded-konyk"></div>
 <!-- // shadows above towns -->
 
 
@@ -43,6 +42,7 @@
 							<span class="pin-icon pin-icon_town"><a href="<?php echo $this->get('base_url').'towns/horse/city'?>" class="ui-pin-link cityKonik"></a></span>
 							<div class="pin-title"><div class="pin-title-text pin-title-text_big">Конык</div></div>
 						</div>
+						<div class="ui-shaded ui-shaded-konyk"></div>
 
 						<div class="ui-pin ui-pin_visible pin-alpiyka" data-make-visible=".js-road-to-alpiyka">
 							<span class="pin-icon pin-icon_town"><a href="<?php echo $this->get('base_url').'towns/alpiyka/city'?>" class="ui-pin-link cityAlpiyka"></a></span>
@@ -113,7 +113,7 @@
 							<div class="pin-title"><div class="pin-title-text">Ресторан <br/>&laquo;Маячек&raquo;</div></div>
 						</div>
 
-						<div class="ui-pin pin-odessa ui-pin_visible">
+						<div class="ui-pin pin-odessa ui-pin_visible js-zoomable">
 							<span class="pin-icon pin-icon_horizontal pin-icon_city_horizontal"></span>
 							<div class="pin-title"><div class="pin-title-text pin-title-text_big">Одесса</div></div>
 						</div>
