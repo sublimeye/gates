@@ -98,11 +98,10 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 /* ===================
     ALL:
    =================== */
+
 /* FOOTER */
 .footer {
-	/*position: fixed;*/
-	/*bottom: 0;*/
-	/*left: 0;*/
+	min-width: 920px;;
 	height: 70px;
 	width: 100%;
 	background: #ffffff;
@@ -110,32 +109,24 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 }
 .footContainer {
 	max-width: 1280px;
-	/*width: 1200px;*/
-	/*height: 70px;*/
 	margin: 0 auto;
 	text-align: right;
 	position: relative;
-	/*padding-top: 11px;*/
 }
 .logo {
 	display: block;
 	width: 174px;
 	height: 39px;
-	/*position: absolute;*/
-	/*left: 13px;*/
-	/*top: 13px;*/
 	float: left;
 	margin: 10px 0 0 13px;
 
 	background: url(../img/logoZV.png)
 }
+
 .news {
 	width: 410px;
 	height: 70px;
 	overflow: hidden;
-	/*position: absolute;
-	right: 13px;
-	top: 11px;*/
 	float: right;
 	-moz-user-select: none;
 	-o-user-select: none;
@@ -209,6 +200,7 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 }
 
 @media screen and (max-width: 920px) {
+/*
 	.footer {
 		height: 190px;
 	}
@@ -249,6 +241,7 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	.footContainer .link-holder a {
 		margin: 0 auto;
 	}
+*/
 }
 
 /* CONTENT */
@@ -655,10 +648,10 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	left: auto;
 	right: 133px;
 	width: 120px;
-	height: 35px;
+	height: auto;
 	font-size: 11px;
 	line-height: normal;
-	padding-top: 3px;
+	padding: 5px 0;
 }
 
 /*
@@ -736,6 +729,7 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	background: url(../img/topMenuTriangle.png) no-repeat;
 	cursor: pointer;
 }
+
 .cityMenu .menuItem {
 	position: relative;
 	top: 1px;
@@ -753,6 +747,7 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 .cityMenu .active {
 	color: #333333;
 }
+
 .infrastructureBlock {
 	width: 400px;
 	position: fixed;
@@ -994,7 +989,8 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	margin: 8px auto 12px;
 	border-radius: 3px;
 	border: 1px solid #ffffff;
-	box-shadow: 0px 1px 2px #bebebe;
+	-webkit-box-shadow: 0 1px 5px 2px #ccc;
+	box-shadow: 0 1px 5px 2px #ccc;
 	text-align: center;
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(top, #ffffff 0%, #eaeced 100%); /* FF3.6+ */
@@ -1006,7 +1002,8 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eaeced', GradientType=0); /* IE6-9 */
 }
 .houseDescription .moreBtn:hover {
-	box-shadow: 0px 0px 7px #aeaeae;
+	-webkit-box-shadow: 0 1px 5px 3px #bfbfbf;
+	box-shadow: 0 1px 5px 3px #bfbfbf;
 }
 
 .overlay {
@@ -1516,7 +1513,7 @@ path {
 .pin-river-konyk {left: 1410px; top: 325px;}
 .pin-domoshpere {left: 1025px; top: 335px;}
 
-.pin-bar-beacon { right: 0; top: 45%; }
+.pin-bar-beacon { right: 0; top: 330px; }
 .pin-odessa { left: 0; top: 30%;}
 .pin-odessa .pin-title-text { width: 260px; position: relative; left: 0; margin-left: 0; top: -40px; ;}
 
@@ -1525,7 +1522,6 @@ path {
 	left: -100px;
 	text-align: left;
 	top: -46px;
-	/*width: 200px;*/
 ;}
 
 .ui-pin_iconed {
@@ -1570,8 +1566,22 @@ path {
 
 .ui-road-distance {
 	position: absolute;
-	display: none;
+	color: #fff;
+	text-shadow: 0 0 10px #000, 1px 1px 15px #000;
+	font-size: 26px;
+	white-space: nowrap;
 }
+
+.ui-road-highlight-alpiyka .ui-road-distance {
+	left: 166px;
+	top: 291px;
+}
+
+.ui-road-highlight-konyk .ui-road-distance {
+	left: 70px;
+	top: 40px;
+}
+
 
 /* shades over towns on main page */
 .ui-shaded {
@@ -1634,9 +1644,16 @@ path {
 }
 
 .js-zoomable {
-	-webkit-transform-origin: center left;
+/*
+	-webkit-transform-origin: top left;
 	-ms-transform-origin: top left;
 	transform-origin: top left;
+*/
+}
+.pin-bar-beacon.js-zoomable {
+	-webkit-transform-origin: top right;
+	-ms-transform-origin: top right;
+	transform-origin: top right;
 }
 
 .ui-windrose {
@@ -1645,7 +1662,14 @@ path {
 	left: 1%;
 	top: 1%;
 	width: 118px;
-	height: 119px;;
+	height: 119px;
+	opacity: .8;
 
 	background: url("/img/ui_windrose.png");
+}
+
+.g-transform-origin-top-left {
+	-webkit-transform-origin: top left;
+	-ms-transform-origin: top left;
+	transform-origin: top left;
 }

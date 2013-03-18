@@ -3,12 +3,7 @@
 <?php $this->load->view('header')?>
 
 <div class="outerWrapper">
-					<div class="ui-windrose ui-windrose-main js-zoomable"></div>
-					<div class="fixLabels">
-<!--
-							<div class="label bigF obuh1"> Конча-Заспа <div class="line"></div> </div> <div class="label bigF obuh2"> Обухов <div class="line"></div> </div> <div class="label bigF odessa"> Одесса <div class="line"></div> </div> <div class="label bigF cKiev"> Центр Киева <div class="line"></div> <div class="kms">7 км</div> </div> <div class="label bigF cDomosfera"> Домосфера <div class="line"></div> <div class="kms">900 м</div> </div>
--->
-					</div>
+					<div class="ui-windrose ui-windrose-main js-zoomable g-transform-origin-top-left"></div>
 
 	<div class="wrapper">
 			<div class="workArea main js-workarea" data-active-zone="500,140,1464,868">
@@ -96,9 +91,15 @@
 							<div class="pin-title"><div class="pin-title-text">ТЦ &laquo;Домосфера&raquo;</div></div>
 						</div>
 
-<!--
-							<a href="<?php echo $this->get('base_url').'towns/horse/city'?>" class="label bigF cityKonik"> <img src="/img/logoKonik.png" width="79" height="58" alt="" /> <div class="tail"></div> </a> <a href="<?php echo $this->get('base_url').'towns/alpiyka/city'?>" class="label bigF cityAlpiyka"> <img src="/img/logoAlpiyka.png" width="88" height="51" alt="" /> <div class="tail"></div> </a> <div class="label bigF dinamo"> База “Динамо” <div class="tail"></div> </div> <div class="label bigF konikRiver"> Река “Конык” <div class="tail"></div> </div> <div class="label bigF zhOstrov"> Заповедник <br />“Жуков остров” <div class="tail"></div> </div> <div class="label bigF azsShell"> АЗС “Shell” <div class="tail"></div> </div> <div class="label bigF bLake"> Голубое озеро <div class="tail"></div> </div>
--->
+						<div class="ui-pin pin-bar-beacon">
+							<span class="pin-icon pin-icon_horizontal pin-icon_food_horizontal"></span>
+							<div class="pin-title"><div class="pin-title-text">Ресторан <br/>&laquo;Маячек&raquo;</div></div>
+						</div>
+
+						<div class="ui-pin pin-odessa ui-pin_visible">
+							<span class="pin-icon pin-icon_horizontal pin-icon_city_horizontal"></span>
+							<div class="pin-title"><div class="pin-title-text pin-title-text_big">Одесса</div></div>
+						</div>
 
 					</div>
 			</div>
@@ -107,17 +108,7 @@
 
 <!--horizontal-->
 
-					<div class="js-fixed-labels">
-						<div class="ui-pin pin-bar-beacon">
-							<span class="pin-icon pin-icon_horizontal pin-icon_food_horizontal"></span>
-							<div class="pin-title"><div class="pin-title-text">Ресторан <br/>&laquo;Маячек&raquo;</div></div>
-						</div>
-
-						<div class="ui-pin pin-odessa ui-pin_visible js-zoomable">
-							<span class="pin-icon pin-icon_horizontal pin-icon_city_horizontal"></span>
-							<div class="pin-title"><div class="pin-title-text pin-title-text_big">Одесса</div></div>
-						</div>
-					</div>
+					<div class="js-fixed-labels"></div>
 
 </div><!-- outer wrapper -->
 
@@ -125,6 +116,6 @@
 
 <script>
 $(function(){
-	$('.aui-shaded').draggable();
+	$('.ui-road-distance').draggable();
 });
 </script>

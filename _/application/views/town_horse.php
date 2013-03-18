@@ -2,6 +2,7 @@
 
 <?php $this->load->view('header')?>
 
+<script src="/js/underscore-min.js" type="text/javascript"></script>
 <script src="/js/jquery.tools.min.js"></script>
 <script src="/js/jquery-ui-1.10.1.custom.min.js"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
@@ -41,13 +42,14 @@
 </div>
 
 <div class="outerWrapper">
+
+	<div class="ui-windrose ui-windrose-main js-zoomable g-transform-origin-top-left"></div>
+
 	<div class="wrapper">
 
-			<div class="workArea alpiyka js-workarea" id="city_block" data-active-zone="155,155,1000,700">
+			<div class="workArea alpiyka js-workarea" id="city_block" data-active-zone="90,150,1400,800">
 
 					<div class="fixLabels">
-
-							<div class="windRose"></div>
 
 					</div>
 
@@ -65,8 +67,6 @@
 					<div class="fixLabels">
 
 
-							<div class="windRose"></div>
-
 							<div class="label bigF dinamo">
 								 База “Динамо”
 								 <div class="line"></div>
@@ -74,7 +74,7 @@
 							</div>
 
 							<div class="label bigF mayachok">
-								 Ресторан “Маячок”
+								 Ресторан “Маячек”
 								 <div class="line"></div>
 								 <div class="kms">2 км</div>
 							</div>
