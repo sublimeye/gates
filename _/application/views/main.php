@@ -8,6 +8,18 @@
 	<div class="wrapper">
 			<div class="workArea main js-workarea" data-active-zone="500,140,1464,868">
 
+					<div class="viewscreen-fixed-wrapper">
+						<div class="ui-pin pin-bar-beacon">
+							<span class="pin-icon pin-icon_horizontal pin-icon_food_horizontal"></span>
+							<div class="pin-title"><div class="pin-title-text">Ресторан <br/>&laquo;Маячек&raquo;</div></div>
+						</div>
+
+						<div class="ui-pin pin-odessa ui-pin_visible">
+							<span class="pin-icon pin-icon_horizontal pin-icon_city_horizontal"></span>
+							<div class="pin-title"><div class="pin-title-text pin-title-text_big">Одесса</div></div>
+						</div>
+					</div>
+
 					<div class="allLabels">
 <!-- shadows above towns -->
 						<a href="<?php echo $this->get('base_url').'towns/alpiyka/city'?>" class="ui-shaded-link-alpiyka cityAlpiyka" data-make-visible=".js-road-to-alpiyka"></a>
@@ -89,16 +101,6 @@
 						<div class="ui-pin pin-domoshpere">
 							<span class="pin-icon pin-icon_shopping"></span>
 							<div class="pin-title"><div class="pin-title-text">ТЦ &laquo;Домосфера&raquo;</div></div>
-						</div>
-
-						<div class="ui-pin pin-bar-beacon">
-							<span class="pin-icon pin-icon_horizontal pin-icon_food_horizontal"></span>
-							<div class="pin-title"><div class="pin-title-text">Ресторан <br/>&laquo;Маячек&raquo;</div></div>
-						</div>
-
-						<div class="ui-pin pin-odessa ui-pin_visible">
-							<span class="pin-icon pin-icon_horizontal pin-icon_city_horizontal"></span>
-							<div class="pin-title"><div class="pin-title-text pin-title-text_big">Одесса</div></div>
 						</div>
 
 					</div>

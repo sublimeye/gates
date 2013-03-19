@@ -45,13 +45,10 @@
 
 	<div class="wrapper">
 
-
 			<div class="workArea konik js-workarea" id="city_block" data-active-zone="92,180,1160,750"><!-- альпийка -->
 
 					<div class="allLabels">
-
-							<div id="map">
-							</div>
+							<div id="map"></div>
 					</div>
 
 					<div class="overlay" style="z-index:60000;display:none;"></div>

@@ -1016,7 +1016,7 @@ var mapResizer = {
 	 * @param scale
 	 */
 	triggerSpecificSizeEvents: function(W, H, scale) {
-		var smallScreen = W < 1200 || H < 574;
+		var smallScreen = W < 1200 || H < 644;
 		topMenu.toggleMenu(smallScreen);
 	},
 
@@ -1077,9 +1077,12 @@ var mapResizer = {
 		var wrapWidth = (overflowX > 0) ? W / scale : this.img.w;
 		var wrapHeight = (overflowY > 0) ? H / scale : this.img.h;
 
+		/**
+		 * top = 0; Otherwise labels sliding too much vertically. Aligning it to top;
+		 */
 		this.$viewScreenWrapper.css({
 			'left': wrapperX + 'px',
-			'top': wrapperY + 'px',
+			'top': wrapperY + 'px',	// may be set to 0 , if we don't need a top stick
 			'width': wrapWidth + 'px',
 			'height': wrapHeight + 'px'
 		});
@@ -1167,21 +1170,31 @@ var mapResizer = {
  *
  */
 var makeVisible = {
+	timeout: null,
 
 	init: function() {
 
 		$('[data-make-visible]').each(function() {
+			var that = this;
+
 			var makeVisibleSelector = $(this).attr('data-make-visible');
 			var makeVisibleElements = $(makeVisibleSelector);
 
 				$(this).hover(
 				/* mouseover */
+
 				function() {
+					that.timeout && clearTimeout(that.timeout);
 					makeVisibleElements.stop(true, true).fadeIn('fast');
+					console.log('show');
 				},
 				/* mouseout */
 				function() {
-					makeVisibleElements.stop(true, true).fadeOut('fast');
+					that.timeout && clearTimeout(that.timeout);
+					that.timeout = setTimeout(function() {
+						makeVisibleElements.stop(true, true).fadeOut('fast');
+						console.log('hide');
+					}, 500);
 				}
 				);
 		});
