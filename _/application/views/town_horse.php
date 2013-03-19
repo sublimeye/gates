@@ -2,7 +2,6 @@
 
 <?php $this->load->view('header')?>
 
-<script src="/js/underscore-min.js" type="text/javascript"></script>
 <script src="/js/jquery.tools.min.js"></script>
 <script src="/js/jquery-ui-1.10.1.custom.min.js"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
@@ -50,7 +49,6 @@
 			<div class="workArea alpiyka js-workarea" id="city_block" data-active-zone="90,150,1400,800">
 
 					<div class="fixLabels">
-
 					</div>
 
 					<div class="allLabels">
@@ -64,8 +62,7 @@
 
 			<div class="workArea alpiyka noneDisplay" id="infrastructure_block">
 
-					<div class="fixLabels">
-
+					<div class="viewscreen-fixed-wrapper">
 
 							<div class="label bigF dinamo">
 								 База “Динамо”
@@ -87,6 +84,8 @@
 					</div>
 
 					<div class="allLabels">
+
+
 
 							<div class="label bigF konikRiver">
 								 Река “Конык”

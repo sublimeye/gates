@@ -883,49 +883,40 @@ $(document).ready(function () {
 	});
 });
 
-var util = {
-	debounce: function(wait, immediate) {
-		var timeout,
-		    func = this;
-		return function() {
-			var context = this, args = arguments;
-			var later = function() {
-				timeout = null;
-				if (!immediate) func.apply(context, args);
-			};
-			var callNow = immediate && !timeout;
-			clearTimeout(timeout);
-			timeout = setTimeout(later, wait);
-			if (callNow) func.apply(context, args);
-		};
-	}
-};
-
-
 /**
  * slideDown or slideUp top menu after only once, when "duration" completes
- * @type {{element: null, timeout: null, duration: number, init: Function, toggleMenu: Function}}
+ * @type {{element: null, timeout: null, toggleDelay: number, init: Function, toggleMenu: Function}}
  */
 var topMenu = {
 	element: null,
 	timeout: null,
-	duration: 500,
+	toggleDelay: 1000,
 
+	/**
+	 * Find & cache menu element
+	 */
 	init: function () {
 		this.element = $('.cityMenu a');
 	},
 
+	/**
+	 * Slide up (hide) or slide down (show) the menu depending on boolean action flag
+	 * @param action {Boolean} if true - hide the menu, if false - show
+	 */
 	toggleMenu: function (action) {
+		if (!this.element.length) {
+			return false;
+		}
+
 		var that = this;
 
 		this.timeout && clearTimeout(this.timeout);
 
 		this.timeout = setTimeout(function () {
 			that.element[action ? 'slideUp' : 'slideDown']('fast');
-		}, this.duration);
+		}, this.toggleDelay);
 
 	}
-
 
 };
 
@@ -945,6 +936,7 @@ var mapResizer = {
 	$wrapper: null,
 	$footer: null,
 	$outerWrapper: null,
+	$viewScreenWrapper: null,
 	$zoomable: null,
 	img: null,
 	vis: null,
@@ -976,6 +968,7 @@ var mapResizer = {
 		this.$win = $(window);
 		this.$wrapper = $('.wrapper');
 		this.$zoomable = $('.js-zoomable');
+		this.$viewScreenWrapper = $('.viewscreen-fixed-wrapper');
 
 		this.$footer = $('.footer');
 		this.$outerWrapper = $('.outerWrapper');
@@ -1017,7 +1010,7 @@ var mapResizer = {
 	},
 
 	triggerSpecificSizeEvents: function(W, H, scale) {
-		var smallScreen = W < 1200;
+		var smallScreen = W < 1200 || H < 600;
 		topMenu.toggleMenu(smallScreen);
 	},
 
@@ -1071,6 +1064,24 @@ var mapResizer = {
 			'margin-top': -offsetValueY + 'px'
 		});
 
+		var wrapLeft = offsetValueX / scale;
+		var wrapTop = offsetValueY / scale;
+
+		var wrapRight = (this.img.w - wrapLeft);
+		var wrapBottom = 1;
+
+//		wrapLeft = this.img.w - W;
+//		wrapTop = this.img.h * scale - H;
+
+		console.log('W', W);
+//		console.log('offsetValueX', offsetValueX);
+
+		this.$viewScreenWrapper.css({
+			'left': wrapLeft + 'px',
+			'top': wrapTop + 'px',
+			'width': wrapRight + 'px',
+			'bottom': wrapBottom + 'px'
+		});
 	},
 
 	/**
