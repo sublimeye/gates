@@ -856,7 +856,9 @@ $(document).ready(function () {
 	var clouds_obj = new Clouds();
 
 	clouds_obj.Init();
+	topMenu.init();
 	mapResizer.init();
+	makeVisible.init();
 
 	var anchors_section_handler = {
 		'city': main_menu_handler,
@@ -881,6 +883,51 @@ $(document).ready(function () {
 	});
 });
 
+var util = {
+	debounce: function(wait, immediate) {
+		var timeout,
+		    func = this;
+		return function() {
+			var context = this, args = arguments;
+			var later = function() {
+				timeout = null;
+				if (!immediate) func.apply(context, args);
+			};
+			var callNow = immediate && !timeout;
+			clearTimeout(timeout);
+			timeout = setTimeout(later, wait);
+			if (callNow) func.apply(context, args);
+		};
+	}
+};
+
+
+/**
+ * slideDown or slideUp top menu after only once, when "duration" completes
+ * @type {{element: null, timeout: null, duration: number, init: Function, toggleMenu: Function}}
+ */
+var topMenu = {
+	element: null,
+	timeout: null,
+	duration: 500,
+
+	init: function () {
+		this.element = $('.cityMenu a');
+	},
+
+	toggleMenu: function (action) {
+		var that = this;
+
+		this.timeout && clearTimeout(this.timeout);
+
+		this.timeout = setTimeout(function () {
+			that.element[action ? 'slideUp' : 'slideDown']('fast');
+		}, this.duration);
+
+	}
+
+
+};
 
 /**
  * Zoom or Crop Map
@@ -898,6 +945,7 @@ var mapResizer = {
 	$wrapper: null,
 	$footer: null,
 	$outerWrapper: null,
+	$zoomable: null,
 	img: null,
 	vis: null,
 	crop: null,
@@ -927,6 +975,7 @@ var mapResizer = {
 
 		this.$win = $(window);
 		this.$wrapper = $('.wrapper');
+		this.$zoomable = $('.js-zoomable');
 
 		this.$footer = $('.footer');
 		this.$outerWrapper = $('.outerWrapper');
@@ -947,12 +996,13 @@ var mapResizer = {
 	 */
 	fitToWindow: function() {
 		var W = this.$win.width();
+		/* subtracting footer height: for correct visual area calculations */
 		var H = this.$win.height() - this.$footer.outerHeight();
-
-		this.$outerWrapper.height(H);
-
 		var transform = 'top ';
 		var scale;
+
+		/* dynamic outer-wrapper height */
+		this.$outerWrapper.height(H);
 
 		/* get scale index */
 		scale = this.getScale(W, H);
@@ -960,9 +1010,15 @@ var mapResizer = {
 		/* for crop set transform-origin to "top center", for zooming "top left" */
 		transform += (scale === 1) ? 'center' : 'left';
 
+		this.triggerSpecificSizeEvents(W, H, scale);
 		this.updateOffset(W, H, scale);
 		this.setTransform(transform);
 		this.setScale( scale );
+	},
+
+	triggerSpecificSizeEvents: function(W, H, scale) {
+		var smallScreen = W < 1200;
+		topMenu.toggleMenu(smallScreen);
 	},
 
 	/**
@@ -971,11 +1027,13 @@ var mapResizer = {
 	 */
 	setScale: function(scale) {
 		if ( scale !== this.scale ) {
-			this.$wrapper.css({
+			/* zooming wrapper and .js-zoomable elements */
+			this.$wrapper.add(this.$zoomable).css({
 				'-webkit-transform': 'scale( ' + scale + ' )',
 				'-ms-transform': 'scale( ' + scale + ' )',
 				'transform': 'scale( ' + scale + ' )'
 			});
+
 			this.scale = scale;
 		}
 	},
@@ -1091,4 +1149,31 @@ var mapResizer = {
 		this.setTransform('top center');
 		return 1;
 	}
+};
+
+/**
+ *
+ */
+var makeVisible = {
+
+	init: function() {
+
+		$('[data-make-visible]').each(function() {
+			var makeVisibleSelector = $(this).attr('data-make-visible');
+			var makeVisibleElements = $(makeVisibleSelector);
+
+				$(this).hover(
+				/* mouseover */
+				function() {
+					makeVisibleElements.stop(true, true).fadeIn('fast');
+				},
+				/* mouseout */
+				function() {
+					makeVisibleElements.stop(true, true).fadeOut('fast');
+				}
+				);
+		});
+
+	}
+
 };

@@ -2,6 +2,7 @@
 
 <?php $this->load->view('header')?>
 
+<script src="/js/underscore-min.js" type="text/javascript"></script>
 <script src="/js/jquery.tools.min.js"></script>
 <script src="/js/jquery-ui-1.10.1.custom.min.js"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
@@ -41,13 +42,14 @@
 </div>
 
 <div class="outerWrapper">
+	<div class="ui-windrose ui-windrose-main js-zoomable g-transform-origin-top-left"></div>
+
 	<div class="wrapper">
 
-			<div class="workArea konik js-workarea" id="city_block" data-active-zone="92,253,924,750"><!-- альпийка -->
+
+			<div class="workArea konik js-workarea" id="city_block" data-active-zone="92,180,1160,750"><!-- альпийка -->
 
 					<div class="fixLabels">
-
-							<div class="windRose"></div>
 
 					</div>
 
@@ -62,9 +64,7 @@
 
 			<div class="workArea konik noneDisplay" id="infrastructure_block">
 
-					<div class="fixLabels">
-							<div class="windRose"></div>
-					</div>
+					<div class="fixLabels"></div>
 
 					<div class="allLabels">
 

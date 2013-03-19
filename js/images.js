@@ -21,6 +21,7 @@ Images = function () {
 			isVisiblePopup = false;
 		});
 
+		/* close popup by clicking on map */
 		$(document).live('click', function(e) {
 			if ( !$(e.target).closest('.houseDescription, .houseCompleteDescription').length && isVisiblePopup) {
 
@@ -29,6 +30,7 @@ Images = function () {
 			}
 		});
 
+		/* close popup with ESC key */
 		$(document).live('keydown', function( e ) {
 			if (e.which === 27 && isVisiblePopup) {
 				shape_out_handler('instant');
@@ -38,7 +40,6 @@ Images = function () {
 			}
 		});
 
-		/* broken redundant stupid code */
 		$('div.map').live('click', function () {
 			shape_out_handler();
 		});
@@ -57,7 +58,6 @@ Images = function () {
 		});
 
 	};
-
 
 	this.createShape = function (points, attr) {
 		var path = pointToPath(points);

@@ -98,11 +98,10 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 /* ===================
     ALL:
    =================== */
+
 /* FOOTER */
 .footer {
-	/*position: fixed;*/
-	/*bottom: 0;*/
-	/*left: 0;*/
+	min-width: 920px;;
 	height: 70px;
 	width: 100%;
 	background: #ffffff;
@@ -110,32 +109,24 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 }
 .footContainer {
 	max-width: 1280px;
-	/*width: 1200px;*/
-	/*height: 70px;*/
 	margin: 0 auto;
 	text-align: right;
 	position: relative;
-	/*padding-top: 11px;*/
 }
 .logo {
 	display: block;
 	width: 174px;
 	height: 39px;
-	/*position: absolute;*/
-	/*left: 13px;*/
-	/*top: 13px;*/
 	float: left;
-	margin: 2px 0 0 13px;
+	margin: 10px 0 0 13px;
 
 	background: url(../img/logoZV.png)
 }
+
 .news {
 	width: 410px;
-	height: 60px;
+	height: 70px;
 	overflow: hidden;
-	/*position: absolute;
-	right: 13px;
-	top: 11px;*/
 	float: right;
 	-moz-user-select: none;
 	-o-user-select: none;
@@ -209,6 +200,7 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 }
 
 @media screen and (max-width: 920px) {
+/*
 	.footer {
 		height: 190px;
 	}
@@ -249,6 +241,7 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	.footContainer .link-holder a {
 		margin: 0 auto;
 	}
+*/
 }
 
 /* CONTENT */
@@ -655,10 +648,10 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	left: auto;
 	right: 133px;
 	width: 120px;
-	height: 35px;
+	height: auto;
 	font-size: 11px;
 	line-height: normal;
-	padding-top: 3px;
+	padding: 5px 0;
 }
 
 /*
@@ -736,6 +729,7 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	background: url(../img/topMenuTriangle.png) no-repeat;
 	cursor: pointer;
 }
+
 .cityMenu .menuItem {
 	position: relative;
 	top: 1px;
@@ -753,6 +747,7 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 .cityMenu .active {
 	color: #333333;
 }
+
 .infrastructureBlock {
 	width: 400px;
 	position: fixed;
@@ -994,7 +989,8 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	margin: 8px auto 12px;
 	border-radius: 3px;
 	border: 1px solid #ffffff;
-	box-shadow: 0px 1px 2px #bebebe;
+	-webkit-box-shadow: 0 1px 5px 2px #ccc;
+	box-shadow: 0 1px 5px 2px #ccc;
 	text-align: center;
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(top, #ffffff 0%, #eaeced 100%); /* FF3.6+ */
@@ -1006,7 +1002,8 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eaeced', GradientType=0); /* IE6-9 */
 }
 .houseDescription .moreBtn:hover {
-	box-shadow: 0px 0px 7px #aeaeae;
+	-webkit-box-shadow: 0 1px 5px 3px #bfbfbf;
+	box-shadow: 0 1px 5px 3px #bfbfbf;
 }
 
 .overlay {
@@ -1445,6 +1442,7 @@ path {
 	text-shadow: 0 0 10px #000, 1px 1px 15px #000;
 	font-size: 20px;
 	text-align: center;
+	cursor: default;
 }
 
 .pin-title-text_big {
@@ -1467,8 +1465,8 @@ path {
 
 .pin-icon_town {background-position: -180px 5px;}
 .pin-icon_town:hover {background-position: -180px -92px;}
-.pin-konyk .pin-icon_town:hover {background-position: -180px 5px;}
-.pin-alpiyka .pin-icon_town:hover {background-position: -180px 5px;}
+/*.pin-konyk .pin-icon_town:hover {background-position: -180px 5px;}*/
+/*.pin-alpiyka .pin-icon_town:hover {background-position: -180px 5px;}*/
 
 .pin-icon_football {background-position: -120px 5px;}
 .pin-icon_football:hover {background-position: -120px -92px;}
@@ -1507,7 +1505,7 @@ path {
 
 .pin-megamarket {left: 870px; top: 480px;}
 .pin-dnipro-road {left: 915px; top: 615px;}
-.pin-cp {left: 1095px; top: 425px;}
+.pin-cp {left: 1105px; top: 423px;}
 .pin-capital-road {left: 1325px; top: 700px;}
 .pin-blue-lake {left: 1165px; top: 800px;}
 .pin-jukov-reservation {left: 1330px; top: 225px;}
@@ -1515,15 +1513,15 @@ path {
 .pin-river-konyk {left: 1410px; top: 325px;}
 .pin-domoshpere {left: 1025px; top: 335px;}
 
-.pin-bar-beacon { right: 0; top: 50%; }
-.pin-odessa { left: 0; top: 16%;}
-.pin-odessa .pin-title-text { position: relative; left: 0; margin-left: 0; top: -37px; ;}
+.pin-bar-beacon { right: 0; top: 330px; }
+.pin-odessa { left: 0; top: 30%;}
+.pin-odessa .pin-title-text { width: 260px; position: relative; left: 0; margin-left: 0; top: -40px; ;}
 
 .pin-bar-beacon .pin-title-text {
 	position: absolute;
-	right: 0;
-	text-align: right;
-	top: -37px;
+	left: -100px;
+	text-align: left;
+	top: -46px;
 ;}
 
 .ui-pin_iconed {
@@ -1541,3 +1539,137 @@ path {
 
 .icon-available {background-position: -480px 5px;}
 .icon-available:hover {background-position: -480px -92px;}
+
+/* Road path highlight */
+.ui-road-highlight {
+	position: absolute;
+	display: none;
+	z-index: 50000;
+	background: url("/img/bg_town_road_highlight.png") no-repeat;
+}
+
+.ui-road-highlight-alpiyka {
+	width: 440px;
+	height: 351px;
+	background-position: 0 0;
+	left: 702px;
+	top: 405px;
+}
+
+.ui-road-highlight-konyk {
+	width: 118px;
+	height: 100px;
+	background-position: -415px 0;
+	left: 1117px;
+	top: 405px;
+}
+
+.ui-road-distance {
+	position: absolute;
+	color: #fff;
+	text-shadow: 0 0 10px #000, 1px 1px 15px #000;
+	font-size: 26px;
+	white-space: nowrap;
+}
+
+.ui-road-highlight-alpiyka .ui-road-distance {
+	left: 166px;
+	top: 291px;
+}
+
+.ui-road-highlight-konyk .ui-road-distance {
+	left: 70px;
+	top: 40px;
+}
+
+
+/* shades over towns on main page */
+.ui-shaded {
+	position: absolute;
+	z-index: 50000;
+}
+
+.ui-shaded a {
+	/*background: #000;*/
+	/*opacity: 0.5;*/
+}
+
+.ui-shaded-alpiyka {
+	left: 488px;
+	top: 697px;
+	width: 327px;
+	height: 154px;
+	background: none;
+}
+
+.ui-shaded-link-alpiyka {
+	position: absolute;
+	z-index: 50001;
+	display: block;
+	left: 488px;
+	top: 697px;
+	width: 280px;
+	height: 120px;
+	-webkit-transform: skew(-56deg) rotate(11deg);
+	transform: skew(-56deg) rotate(11deg);
+}
+
+.ui-shaded-link-alpiyka:hover + .ui-shaded-alpiyka {
+	background: url("/img/bg_town_alpiyka_shadowed.jpg");
+}
+
+
+.ui-shaded-konyk {
+	left: 1165px;
+	top: 335px;
+	background: none;
+	width: 254px;
+	height: 116px;
+}
+
+.ui-shaded-link-konyk {
+	position: absolute;
+	z-index: 50001;
+	left: 1155px;
+	top: 360px;
+	width: 230px;
+	height: 70px;
+	/*display: none;*/
+	-webkit-transform: skew(-65deg) rotate(12deg);
+	transform: skew(-65deg) rotate(12deg);
+}
+
+.ui-shaded-link-konyk:hover + .ui-shaded-konyk {
+	background: url("/img/bg_town_konyk_shadowed.jpg");
+}
+
+.js-zoomable {
+/*
+	-webkit-transform-origin: top left;
+	-ms-transform-origin: top left;
+	transform-origin: top left;
+*/
+}
+.pin-bar-beacon.js-zoomable {
+	-webkit-transform-origin: top right;
+	-ms-transform-origin: top right;
+	transform-origin: top right;
+}
+
+.ui-windrose {
+	position: absolute;
+	z-index: 500001;
+	left: 1%;
+	top: 1%;
+	width: 118px;
+	height: 119px;
+	opacity: .8;
+
+	background: url("/img/ui_windrose.png");
+}
+
+.g-transform-origin-top-left {
+	-webkit-transform-origin: top left;
+	-ms-transform-origin: top left;
+	transform-origin: top left;
+}
