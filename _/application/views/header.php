@@ -12,10 +12,9 @@
 	<link rel="stylesheet" href="/css/style.css">
 
     <script src="/js/jquery.js" type="text/javascript"></script>
-    <script src="/js/underscore-min.js" type="text/javascript"></script>
-		<script src="/js/jquery.tools.min.js"></script>
-		<script src="/js/jquery-ui-1.10.1.custom.min.js"></script>
-		<script type="text/javascript" src="http://eye.cityi.com.ua/viewer/embedded.js"></script>
+	<script src="/js/jquery.tools.min.js"></script>
+	<script src="/js/jquery-ui-1.10.1.custom.min.js"></script>
+	<script type="text/javascript" src="http://eye.cityi.com.ua/viewer/embedded.js"></script>
 
     <script src="/js/all.js" language="javascript" type="text/javascript"></script>
 

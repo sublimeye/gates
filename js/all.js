@@ -901,28 +901,38 @@ var util = {
 	}
 };
 
-
 /**
  * slideDown or slideUp top menu after only once, when "duration" completes
- * @type {{element: null, timeout: null, duration: number, init: Function, toggleMenu: Function}}
+ * @type {{element: null, timeout: null, toggleDelay: number, init: Function, toggleMenu: Function}}
  */
 var topMenu = {
 	element: null,
 	timeout: null,
-	duration: 500,
+	toggleDelay: 1000,
 
+	/**
+	 * Find & cache menu element
+	 */
 	init: function () {
 		this.element = $('.cityMenu a');
 	},
 
+	/**
+	 * Slide up (hide) or slide down (show) the menu depending on boolean action flag
+	 * @param action {Boolean} if true - hide the menu, if false - show
+	 */
 	toggleMenu: function (action) {
+		if (!this.element.length) {
+			return false;
+		}
+
 		var that = this;
 
 		this.timeout && clearTimeout(this.timeout);
 
 		this.timeout = setTimeout(function () {
 			that.element[action ? 'slideUp' : 'slideDown']('fast');
-		}, this.duration);
+		}, this.toggleDelay);
 
 	}
 
@@ -1017,7 +1027,7 @@ var mapResizer = {
 	},
 
 	triggerSpecificSizeEvents: function(W, H, scale) {
-		var smallScreen = W < 1200;
+		var smallScreen = W < 1200 || H < 600;
 		topMenu.toggleMenu(smallScreen);
 	},
 
