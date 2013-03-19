@@ -49,7 +49,6 @@
 			<div class="workArea alpiyka js-workarea" id="city_block" data-active-zone="90,150,1400,800">
 
 					<div class="fixLabels">
-
 					</div>
 
 					<div class="allLabels">
@@ -63,8 +62,7 @@
 
 			<div class="workArea alpiyka noneDisplay" id="infrastructure_block">
 
-					<div class="fixLabels">
-
+					<div class="viewscreen-fixed-wrapper">
 
 							<div class="label bigF dinamo">
 								 База “Динамо”
@@ -86,6 +84,8 @@
 					</div>
 
 					<div class="allLabels">
+
+
 
 							<div class="label bigF konikRiver">
 								 Река “Конык”

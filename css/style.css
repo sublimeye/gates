@@ -505,7 +505,8 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 .alpiyka .zukOstrov {
 	position: absolute;
 	top: 10px;
-	right: 21px;
+	right: 0;
+	margin-right: 98px;
 	width: 200px;
 }
 .alpiyka .zukOstrov .line {
@@ -519,7 +520,6 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 
 .alpiyka .dinamo {
 	position: absolute;
-	bottom: 121px;
 	right: 604px;
 	width: 150px;
 	top: auto !important;
@@ -527,14 +527,16 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 .alpiyka .dinamo,
 .konik .dinamo {
 	position: absolute;
-	bottom: 121px;
+	bottom: 0;
+	margin-bottom: 50px;
 	right: 604px;
 	width: 150px;
 	top: auto !important;
 }
 .mayachok {
 	position: absolute;
-	bottom: 121px;
+	bottom: 0;
+	margin-bottom: 50px;
 	right: 50px;
 	width: 150px;
 	top: auto !important;
@@ -1672,4 +1674,16 @@ path {
 	-webkit-transform-origin: top left;
 	-ms-transform-origin: top left;
 	transform-origin: top left;
+}
+
+/* fixed labels wrapper */
+.viewscreen-fixed-wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+
+	left: 0;
+	/*right: 0;*/
+
+	border: 10px solid red;
 }
