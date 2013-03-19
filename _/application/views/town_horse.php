@@ -46,15 +46,10 @@
 
 	<div class="wrapper">
 
-			<div class="workArea alpiyka js-workarea" id="city_block" data-active-zone="90,150,1400,800">
-
-					<div class="fixLabels">
-					</div>
+			<div class="workArea alpiyka js-workarea" id="city_block" data-active-zone="90,170,1400,765">
 
 					<div class="allLabels">
-
-							<div id="map">
-							</div>
+							<div id="map"></div>
 					</div>
 
 					<div class="overlay" style="z-index:60000;display:none;"></div>
@@ -81,6 +76,23 @@
 								 <div class="line"></div>
 							</div>
 
+							<div class="infrastructureBlock">
+									<div class="menu">
+											<div id="block_content_one" class="menuItem active">Служба безопасности и сервиса</div>
+											<!--div id="block_content_two" class="menuItem">Служба сервиса</div-->
+									</div>
+
+									<div class="blockContent one">
+											<ul>
+												<li>КПП на въезде</li>
+												<li>Круглосуточная охрана и патрулирование территории</li>
+												<li>Вывоз мусора, сезонные уборка листьев и снега</li>
+												<li>Систематическое техническое обслуживание и профилактический ремонт сетей городка</li>
+												<li>Обслуживание системы уличного освещения, зон общего пользования</li>
+											</ul>
+									</div>
+									<div class="blockContent two" style="display: none"></div>
+							</div>
 					</div>
 
 					<div class="allLabels">
@@ -115,26 +127,6 @@
 							<div class="label bigF playGround">
 									Детская площадка
 								 <div class="tail"></div>
-							</div>
-
-							<div class="infrastructureBlock">
-									<div class="menu">
-											<div id="block_content_one" class="menuItem active">Служба безопасности и сервиса</div>
-											<!--div id="block_content_two" class="menuItem">Служба сервиса</div-->
-									</div>
-
-									<div class="blockContent one">
-											<ul>
-												<li>КПП на въезде</li>
-												<li>Круглосуточная охрана и патрулирование территории</li>
-												<li>Вывоз мусора, сезонные уборка листьев и снега</li>
-												<li>Систематическое техническое обслуживание и профилактический ремонт сетей городка</li>
-												<li>Обслуживание системы уличного освещения, зон общего пользования</li>
-											</ul>
-									</div>
-									<div class="blockContent two" style="display: none">
-
-									</div>
 							</div>
 
 					</div>

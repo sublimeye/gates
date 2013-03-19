@@ -1009,8 +1009,14 @@ var mapResizer = {
 		this.setScale( scale );
 	},
 
+	/**
+	 * Trigger show/hide of the top menu, depending on window size
+	 * @param W
+	 * @param H
+	 * @param scale
+	 */
 	triggerSpecificSizeEvents: function(W, H, scale) {
-		var smallScreen = W < 1200 || H < 600;
+		var smallScreen = W < 1200 || H < 574;
 		topMenu.toggleMenu(smallScreen);
 	},
 
@@ -1048,6 +1054,7 @@ var mapResizer = {
 
 	/**
 	 * Updates CSS margin property of the .wrapper element, considering scale index
+	 * Set Left, Top, Width, Height properties for fixed labels wrapper
 	 * @param W {Number} Window width
 	 * @param H {Number} Window height
 	 * @param scale {Number} Scale index
@@ -1064,23 +1071,17 @@ var mapResizer = {
 			'margin-top': -offsetValueY + 'px'
 		});
 
-		var wrapLeft = offsetValueX / scale;
-		var wrapTop = offsetValueY / scale;
-
-		var wrapRight = (this.img.w - wrapLeft);
-		var wrapBottom = 1;
-
-//		wrapLeft = this.img.w - W;
-//		wrapTop = this.img.h * scale - H;
-
-		console.log('W', W);
-//		console.log('offsetValueX', offsetValueX);
+		/* Set Left, Top, Width, Height properties for fixed labels wrapper */
+		var wrapperX = offsetValueX / scale;
+		var wrapperY = offsetValueY / scale;
+		var wrapWidth = (overflowX > 0) ? W / scale : this.img.w;
+		var wrapHeight = (overflowY > 0) ? H / scale : this.img.h;
 
 		this.$viewScreenWrapper.css({
-			'left': wrapLeft + 'px',
-			'top': wrapTop + 'px',
-			'width': wrapRight + 'px',
-			'bottom': wrapBottom + 'px'
+			'left': wrapperX + 'px',
+			'top': wrapperY + 'px',
+			'width': wrapWidth + 'px',
+			'height': wrapHeight + 'px'
 		});
 	},
 
