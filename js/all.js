@@ -23,7 +23,7 @@ $(document).ready(function () {
 				preloadImages(images[i], i);
 			}
 
-			canvas_width = 1488;
+			canvas_width = 2000;
 			canvas_height = 927;
 
 			$('div.wrapper').prepend($('<canvas style="z-index:50000;position:absolute;" class="workArea" id="cloud"></canvas>'));

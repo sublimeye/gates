@@ -57,6 +57,7 @@
 			<div class="workArea konik noneDisplay" id="infrastructure_block">
 
 					<div class="viewscreen-fixed-wrapper">
+
 							<div class="infrastructureBlock">
 									<div class="menu">
 											<div id="block_content_one" class="menuItem active">Служба безопасности и сервиса</div>

@@ -1113,9 +1113,9 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 }
 .description .photos .menu .menuItem,
 .infrastructureBlock .menu .menuItem {
-	font-size: 10px !important;
-	line-height: 20px !important;
-	padding: 0 8px !important;
+	font-size: 0.8em !important;
+	line-height: 2em !important;
+	padding: 0 .5em !important;
 	margin-right: 10px !important;
 }
 .description .photos .photo,
@@ -1244,6 +1244,7 @@ iframe {
 .content.scrollable {
 	/* required settings */
 	width: 1000px;
+	/*width: 70%;*/
 	margin: 0 auto;
 	padding: 0;
 	left: auto;
@@ -1283,7 +1284,7 @@ iframe {
 	top: 0;
 	z-index: 200;
 	/*width: expression(document.body.offsetWidth  - 110 + "px");*/
-	width: 15%;
+	width: 20%;
 	height: 500px;
 	bottom: auto;
 	float: none;
@@ -1597,7 +1598,8 @@ path {
 
 .ui-shaded-link-alpiyka:hover + .ui-shaded-alpiyka,
 .g-hover.ui-shaded-alpiyka {
-	background: url("/img/bg_town_alpiyka_shadowed.jpg");
+	opacity: .8;
+	background: url("/img/bg_town_alpiyka_shadowed.png");
 }
 
 
@@ -1623,7 +1625,8 @@ path {
 
 .ui-shaded-link-konyk:hover + .ui-shaded-konyk,
 .g-hover.ui-shaded-konyk{
-	background: url("/img/bg_town_konyk_shadowed.jpg");
+	opacity: .8;
+	background: url("/img/bg_town_konyk_shadowed.png");
 }
 
 .js-zoomable {
