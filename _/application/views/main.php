@@ -8,7 +8,7 @@
 	<div class="wrapper">
 			<div class="workArea main js-workarea" data-active-zone="500,140,1464,868">
 
-					<div class="viewscreen-fixed-wrapper">
+					<div class="viewscreen-fixed-wrapper viewscreen-fixed-wrapper-relative_top">
 						<div class="ui-pin pin-bar-beacon">
 							<span class="pin-icon pin-icon_horizontal pin-icon_food_horizontal"></span>
 							<div class="pin-title"><div class="pin-title-text">Ресторан <br/>&laquo;Маячек&raquo;</div></div>
@@ -22,10 +22,10 @@
 
 					<div class="allLabels">
 <!-- shadows above towns -->
-						<a href="<?php echo $this->get('base_url').'towns/alpiyka/city'?>" class="ui-shaded-link-alpiyka cityAlpiyka" data-make-visible=".js-road-to-alpiyka"></a>
+						<a href="<?php echo $this->get('base_url').'towns/alpiyka/city'?>" class="ui-shaded-link-alpiyka cityAlpiyka" data-make-visible=".js-road-to-alpiyka" data-hover=".pin-alpiyka"></a>
 						<div class="ui-shaded ui-shaded-alpiyka"></div>
 
-						<a href="<?php echo $this->get('base_url').'towns/horse/city'?>" class="ui-shaded-link-konyk cityKonik" data-make-visible=".js-road-to-konyk"></a>
+						<a href="<?php echo $this->get('base_url').'towns/horse/city'?>" class="ui-shaded-link-konyk cityKonik" data-make-visible=".js-road-to-konyk" data-hover=".pin-konyk"></a>
 						<div class="ui-shaded ui-shaded-konyk"></div>
 <!-- // shadows above towns -->
 
@@ -46,13 +46,13 @@
 						</div>
 
 						<div class="ui-pin ui-pin_visible pin-konyk" data-make-visible=".js-road-to-konyk">
-							<span class="pin-icon pin-icon_town"><a href="<?php echo $this->get('base_url').'towns/horse/city'?>" class="ui-pin-link cityKonik"></a></span>
+							<span class="pin-icon pin-icon_town" data-hover=".ui-shaded-konyk"><a href="<?php echo $this->get('base_url').'towns/horse/city'?>" class="ui-pin-link cityKonik"></a></span>
 							<div class="pin-title"><div class="pin-title-text pin-title-text_big">Конык</div></div>
 						</div>
-						<div class="ui-shaded ui-shaded-konyk"></div>
+
 
 						<div class="ui-pin ui-pin_visible pin-alpiyka" data-make-visible=".js-road-to-alpiyka">
-							<span class="pin-icon pin-icon_town"><a href="<?php echo $this->get('base_url').'towns/alpiyka/city'?>" class="ui-pin-link cityAlpiyka"></a></span>
+							<span class="pin-icon pin-icon_town"  data-hover=".ui-shaded-alpiyka"><a href="<?php echo $this->get('base_url').'towns/alpiyka/city'?>" class="ui-pin-link cityAlpiyka"></a></span>
 							<div class="pin-title"><div class="pin-title-text pin-title-text_big">Альпийка</div></div>
 						</div>
 
