@@ -184,6 +184,7 @@ Images = function () {
 
 		var pin_point = bilding_data.pin_point;
 		bilding_data = bilding_data.attr;
+//		console.log('bilding_data', bilding_data);
 
 		$(win).attr('shape_over', 'true');
 
@@ -247,9 +248,10 @@ Images = function () {
 				var img = "";
 
 				for (var i = 0; i < bilding_data.images.length; i++) {
-					img = ' <div class="smallPhoto"><img src="/user_files/building_place_images/small_' + bilding_data.images[i]['img'] + '" /></div>';
-					$('div.gallery').append(img);
+					img += ' <div class="smallPhoto"><img src="/user_files/building_place_images/small_' + bilding_data.images[i]['img'] + '" /></div>';
 				}
+
+				$('div.gallery').append(img);
 			}
 
 			/* retardation */

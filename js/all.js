@@ -1026,9 +1026,15 @@ var mapResizer = {
 	 * @param scale {string} scale value
 	 */
 	setScale: function(scale) {
+		var fontsize = 100;
+
 		if ( scale !== this.scale ) {
+
+			fontsize = (scale < 0) ? fontsize : fontsize + (100 - scale * 100);
+
 			/* zooming wrapper and .js-zoomable elements */
 			this.$wrapper.add(this.$zoomable).css({
+				'font-size': fontsize + '%',
 				'-webkit-transform': 'scale( ' + scale + ' )',
 				'-ms-transform': 'scale( ' + scale + ' )',
 				'transform': 'scale( ' + scale + ' )'

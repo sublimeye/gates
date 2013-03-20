@@ -656,42 +656,6 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	padding: 5px 0;
 }
 
-/*
-.cityKonik {
-	display: block;
-	position: absolute;
-	top: 245px;
-	left: 400px;
-	width: 101px;
-	height: 95px;
-	padding-top: 14px;
-	text-decoration: none;
-	z-index: 50001;
-}
-.cityKonik:hover {
-	opacity: 0.9;
-	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
-}
-*/
-/*
-
-.cityAlpiyka {
-	display: block;
-	position: absolute;
-	top: 315px;
-	left: 905px;
-	width: 101px;
-	height: 95px;
-	padding-top: 18px;
-	text-decoration: none;
-	z-index: 50001;
-}
-.cityAlpiyka:hover {
-	opacity: 0.9;
-	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
-}
-*/
-
 .windRose {
 	width: 120px;
 	height: 120px;
@@ -1059,7 +1023,7 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	width: 860px;
 	margin: 23px auto 20px;
 	text-align: center;
-	font-size: 20px;
+	font-size: 1.429em;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: #222222;
@@ -1069,12 +1033,12 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 }
 .houseCompleteDescription .menu {
 	text-align: center;
-	font-size: 0;
+	font-size: 1em;
 }
 .houseCompleteDescription .menu .menuItem,
 .infrastructureBlock .menu .menuItem {
 	color: #333333;
-	font-size: 12px;
+	font-size: .857em;
 	text-transform: uppercase;
 	display: inline-block;
 	line-height: 25px;
@@ -1101,7 +1065,8 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 .houseCompleteDescription .content {
 	width: auto;
 	white-space: nowrap;
-	font-size: 0;
+	/*font-size: 0;*/
+	font-size: 1em;
 	position: relative;
 	left: 50%;
 	margin-left: -3280px;
@@ -1119,16 +1084,16 @@ body { font: 14px Tahoma, Arial, sans-serif; }
 	vertical-align: top;
 	width: 400px;
 	height: 332px;
-	font-size: 13px;
+	font-size: 1em;
 	color: #666666;
 	white-space: normal;
 	text-align: left;
-	line-height: 18px;
+	line-height: 1.286em;
 	overflow-y: auto;
 	margin-right: 10px;
 }
 .description .text h3 {
-	font-size: 14px;
+	font-size: 1em;
 	text-transform: uppercase;
 	color: #333333;
 	margin-top: 0;
@@ -1437,24 +1402,28 @@ path {
 	position: absolute;
 	width: 300px;
 	left: -125px;
-	/*margin-left: 43px;*/
-	top: -90px;
+	top: -75px;
+	margin-top: -1em;
 	white-space: nowrap;
 	color: #fff;
 	text-shadow: 0 0 10px #000;
 	text-shadow: 0 0 10px #000, 1px 1px 15px #000;
-	font-size: 20px;
+	/*font-size: 20px;*/
+	font-size: 1.3em;
 	text-align: center;
 	cursor: default;
 }
 
 .pin-title-text_big {
-	top: -100px;
-	font-size: 32px;
+	top: -70px;
+	margin-top: -1em;
+	/*font-size: 32px;*/
+	font-size: 2em;
 }
 
 .pin-title-text_double {
-	top: -115px;
+	top: -90px;
+	margin-top: -1em;
 }
 
 .pin-title { position: relative; display: none; }
@@ -1469,8 +1438,6 @@ path {
 .pin-icon_town {background-position: -180px 5px;}
 .pin-icon_town:hover {background-position: -180px -92px;}
 .g-hover .pin-icon_town {background-position: -180px -92px;}
-/*.pin-konyk .pin-icon_town:hover {background-position: -180px 5px;}*/
-/*.pin-alpiyka .pin-icon_town:hover {background-position: -180px 5px;}*/
 
 .pin-icon_football {background-position: -120px 5px;}
 .pin-icon_football:hover {background-position: -120px -92px;}
@@ -1519,13 +1486,13 @@ path {
 
 .pin-bar-beacon { right: 0; top: 440px; }
 .pin-odessa { left: 0; top: 300px;}
-.pin-odessa .pin-title-text { width: 260px; position: relative; left: 0; margin-left: 0; top: -40px; ;}
+.pin-odessa .pin-title-text { width: 150px; position: relative; left: 0; margin-left: 1.4em; top: -10px;}
 
 .pin-bar-beacon .pin-title-text {
 	position: absolute;
-	left: -100px;
+	left: -5em;
 	text-align: left;
-	top: -46px;
+	top: -26px;
 ;}
 
 .ui-pin_iconed {
@@ -1666,6 +1633,7 @@ path {
 	transform-origin: top left;
 */
 }
+
 .pin-bar-beacon.js-zoomable {
 	-webkit-transform-origin: top right;
 	-ms-transform-origin: top right;
