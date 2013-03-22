@@ -897,7 +897,7 @@ $(document).ready(function () {
 var topMenu = {
 	element: null,
 	timeout: null,
-	toggleDelay: 1000,
+	toggleDelay: 2500,
 
 	/**
 	 * Find & cache menu element
@@ -920,7 +920,7 @@ var topMenu = {
 		this.timeout && clearTimeout(this.timeout);
 
 		this.timeout = setTimeout(function () {
-			that.element[action ? 'slideUp' : 'slideDown']('fast');
+			that.element[action ? 'slideUp' : 'slideDown'](600);
 		}, this.toggleDelay);
 
 	}

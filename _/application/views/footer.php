@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
 <div class="overlay_news" style="z-index:60000;display:none;"></div>
-<div class="footer">
+<div class="footer<?if($this->uri->segment(2) == "alpiyka" || $this->uri->segment(2) == "horse"){?> footer-town<?}else{?> footer-main<?}?>">
     <div class="footContainer">
         <a href="<?php echo $this->get('base_url')?>" class="logo"></a>
 				<div class="footer-right-holder">	
