@@ -184,12 +184,14 @@ Images = function () {
 
 		var pin_point = bilding_data.pin_point;
 		bilding_data = bilding_data.attr;
-//		console.log('bilding_data', bilding_data);
+		console.log('bilding_data', bilding_data);
 
 		$(win).attr('shape_over', 'true');
 
 		if ($(win).is(':hidden') || $(win).attr('building_id') != bilding_data['id']) {
+			/* set title */
 			$(win).find('h3').html(bilding_data.name);
+			/* set area square */
 			if (parseInt(bilding_data.square) > 800) {
 				$(win).find('div.footage').html("<b>" + (parseInt(bilding_data.square) / 10000) + "</b> га")
 			} else {

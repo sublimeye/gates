@@ -438,6 +438,7 @@ $(document).ready(function () {
 
 	/* Отобразить следующую фотографию */
 
+	/* Photo switch in city-overview small-popup */
 	$('div.photo > img').live('click', function () {
 		var active_menu_item = ($('#additional_img').hasClass('active')) ? 0 : 1;
 		var parent = (!active_menu_item)
@@ -464,7 +465,7 @@ $(document).ready(function () {
 				$('#place_img_' + click_index).addClass('active');
 			}
 
-			$(img).animate({opacity: 0}, 100, function () {
+			$(img).stop(true.true).animate({opacity: 0}, 100, function () {
 				$(img).attr('src', $(show_img).attr('src'));
 				$(img).animate({opacity: 1}, 100);
 			});
