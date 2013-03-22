@@ -439,7 +439,7 @@ $(document).ready(function () {
 	/* Отобразить следующую фотографию */
 
 	/* Photo switch in city-overview small-popup */
-	$('div.photo > img').live('click', function () {
+	$('.contentItem .photo > img').live('click', function () {
 		var active_menu_item = ($('#additional_img').hasClass('active')) ? 0 : 1;
 		var parent = (!active_menu_item)
 			? $('div.additional_img')
