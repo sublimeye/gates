@@ -524,6 +524,8 @@ $(document).ready(function () {
 
 			$('#' + active_block_type + "_block").css('display', 'none');
 			$('#city_block').css('display', 'block');
+			/* reStarting or initializing map resizer */
+			mapResizer.startResizer();
 		}
 
 		if (segment == 'infrastructure' && $(active_section).attr('id') != 'link_infrastructure') {
@@ -536,6 +538,8 @@ $(document).ready(function () {
 
 			$('#' + active_block_type + "_block").css('display', 'none');
 			$('#infrastructure_block').css('display', 'block');
+			/* reStarting or initializing map resizer */
+			mapResizer.startResizer();
 		}
 
 		if (segment == 'map' && $(active_section).attr('id') != 'link_map') {
@@ -547,6 +551,8 @@ $(document).ready(function () {
 			$('#' + active_block_type + "_block").css('display', 'none');
 			$('#map_block').css('display', 'block');
 
+			/* Preventing zooming for google maps */
+			mapResizer.stopResizer();
 			initialize();
 		}
 	}
@@ -955,6 +961,25 @@ var mapResizer = {
 		$(window).bind('resize', function() {
 			that.fitToWindow();
 		});
+	},
+
+	startResizer: function() {
+		if (!this.scale) {
+			this.events();
+			this.fitToWindow();
+		}
+	},
+
+	stopResizer: function() {
+		$(window).unbind('resize');
+
+		this.$wrapper.add(this.$zoomable).css({
+			'-webkit-transform': 'none',
+			'-ms-transform': 'none',
+			'transform': 'none'
+		});
+
+		this.scale = null;
 	},
 
 	/**
